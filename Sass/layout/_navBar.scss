@@ -1,0 +1,58 @@
+.nav {
+  background-color: $nav-background;
+  color: $nav-color;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  //   justify-content: space-around;
+  //   display: inline-block;
+  &--logo {
+    padding-left: 25rem;
+    width: 3%;
+    &--icon {
+      width: 100%;
+    }
+  }
+  &--search {
+    margin-left: 2rem;
+    margin-right: 9rem;
+    &--icon {
+      padding: 1rem;
+      color: $nav-color;
+    }
+    &--box {
+      display: inline-block;
+      height: 2rem;
+      padding: 0.2rem;
+      background-color: $nav-color;
+    }
+  }
+  &--menu {
+    // height: 50%;
+    display: inline-block;
+    padding-left: 20rem;
+    // padding: 0.5rem 0;
+    list-style: none;
+    &--items {
+      display: inline-block;
+      padding: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.2;
+      &:hover {
+        color: $hover-color;
+      }
+      align-items: center;
+      //   height: 10%;
+      &--icon {
+        // height: 2rem;
+        // width: 2rem;
+        margin-bottom: 0.7rem;
+        align-content: center;
+      }
+      &--link {
+        display: block;
+      }
+    }
+  }
+}

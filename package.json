@@ -7,7 +7,9 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1"
+  },
   "devDependencies": {
     "node-sass": "^4.13.1"
   },

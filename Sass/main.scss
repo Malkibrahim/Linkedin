@@ -5,6 +5,9 @@
 //components
 //pages
 //themes
+@import "Abstracts/variables";
 @import "base/reset";
 @import "base/typograghy";
+@import "layout/header";
+@import "layout/navBar";
 @import "components/button";
