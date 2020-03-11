@@ -28,7 +28,8 @@ html {
       display: inline-block;
       height: 2rem;
       padding: 0.2rem;
-      background-color: #f4eeff; }
+      background-color: #f4eeff;
+      border-radius: 0.4rem; }
   .nav--menu {
     display: inline-block;
     padding-left: 20rem;
@@ -44,6 +45,28 @@ html {
         color: #b0afb4; }
       .nav--menu--items--icon {
         margin-bottom: 0.7rem;
-        align-content: center; }
+        text-align: center; }
       .nav--menu--items--link {
         display: block; }
+
+.profile {
+  margin: 10rem;
+  border: 1px #918f99 solid;
+  height: 100rem;
+  border-radius: 0.4rem; }
+  .profile--background {
+    border-bottom: 1.5px #918f99 solid;
+    height: 25rem;
+    position: relative; }
+  .profile--photo {
+    margin-left: 5rem;
+    border: 1px black solid;
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    top: 30rem; }
+    .profile--photo--img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%; }
