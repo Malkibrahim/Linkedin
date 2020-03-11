@@ -1,6 +1,6 @@
 .profile {
   margin: 10rem;
-  border: 1px $Borders solid;
+  border: 2px $Borders solid;
   height: 100rem;
   border-radius: 0.4rem;
   // position: absolute;
@@ -8,6 +8,8 @@
     border-bottom: 1.5px $Borders solid;
     height: 25rem;
     position: relative;
+    background-image: url("../../Assets/Background_Photo.jpg");
+    background-size: cover;
   }
   &--photo {
     margin-left: 5rem;
@@ -16,6 +18,8 @@
     border-radius: 50%;
     width: 20rem;
     height: 20rem;
+    padding: 0.2rem;
+    border: 3px solid $Borders;
     // position: absolute;
     position: absolute;
     top: 30rem;

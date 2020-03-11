@@ -51,19 +51,23 @@ html {
 
 .profile {
   margin: 10rem;
-  border: 1px #918f99 solid;
+  border: 2px #dbdbdb solid;
   height: 100rem;
   border-radius: 0.4rem; }
   .profile--background {
-    border-bottom: 1.5px #918f99 solid;
+    border-bottom: 1.5px #dbdbdb solid;
     height: 25rem;
-    position: relative; }
+    position: relative;
+    background-image: url("../../Assets/Background_Photo.jpg");
+    background-size: cover; }
   .profile--photo {
     margin-left: 5rem;
     border: 1px black solid;
     border-radius: 50%;
     width: 20rem;
     height: 20rem;
+    padding: 0.2rem;
+    border: 3px solid #dbdbdb;
     position: absolute;
     top: 30rem; }
     .profile--photo--img {
