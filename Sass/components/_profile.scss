@@ -1,5 +1,5 @@
 .profile {
-  margin: 10rem;
+  margin: 10rem 20rem 20rem;
   border: 2px $Borders solid;
   height: 100rem;
   border-radius: 0.4rem;
@@ -71,6 +71,30 @@
     }
     &--moreBtns {
       margin: 5rem 5rem 0 0;
+      &--edu {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem;
+        //   width: 20rem;
+        display: block;
+        &--icon {
+          img {
+            width: 10%;
+            height: 10%;
+            //display: inline-block;
+          }
+        }
+        &--link {
+          font-weight: 100;
+          text-align: center;
+          font-size: 1.5rem;
+          &:hover {
+            text-decoration: underline;
+            color: $dark-blue;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }
