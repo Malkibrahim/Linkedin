@@ -93,6 +93,22 @@ html {
     background-color: #0073b1; }
     .btn--primary:hover {
       background-color: #006097; }
+  .btn--light {
+    color: #0073b1;
+    background-color: none; }
+    .btn--light .fa-plus {
+      margin: 10px; }
+    .btn--light:hover {
+      background-color: #e5f5fc;
+      cursor: pointer; }
+  .btn--circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%; }
 
 .profile {
   margin: 10rem 20rem 20rem;
