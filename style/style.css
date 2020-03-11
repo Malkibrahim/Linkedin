@@ -111,9 +111,9 @@ html {
     -o-border-radius: 50%; }
 
 .profile {
-  margin: 10rem 20rem 20rem;
+  margin: 5rem 20rem 20rem;
+  padding-bottom: 10rem;
   border: 2px #dbdbdb solid;
-  height: 100rem;
   border-radius: 0.4rem; }
   .profile--background {
     border-bottom: 1.5px #dbdbdb solid;
@@ -130,7 +130,7 @@ html {
     padding: 0.2rem;
     border: 3px solid #dbdbdb;
     position: absolute;
-    top: 30rem; }
+    top: 25rem; }
     .profile--photo--img {
       border-radius: 50%;
       width: 100%;

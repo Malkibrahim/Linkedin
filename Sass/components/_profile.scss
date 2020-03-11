@@ -1,7 +1,8 @@
 .profile {
-  margin: 10rem 20rem 20rem;
+  margin: 5rem 20rem 20rem;
+  padding-bottom: 10rem;
   border: 2px $Borders solid;
-  height: 100rem;
+  // height: 100rem;
   border-radius: 0.4rem;
   // position: absolute;
   &--background {
@@ -22,7 +23,7 @@
     border: 3px solid $Borders;
     // position: absolute;
     position: absolute;
-    top: 30rem;
+    top: 25rem;
     &--img {
       border-radius: 50%;
       width: 100%;
