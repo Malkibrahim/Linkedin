@@ -1,3 +1,3 @@
 ##Project Title
 
-Linkedin sample
+Linkedin sample with Angular

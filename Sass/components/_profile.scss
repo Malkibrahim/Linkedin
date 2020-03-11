@@ -1,0 +1,106 @@
+.profile {
+  margin: 5rem 27rem 27rem;
+  padding-bottom: 10rem;
+  border: 3px $Borders solid;
+  // height: 100rem;
+  // border-radius: 0.4rem;
+  // position: absolute;
+  &--background {
+    border-bottom: 1.5px $Borders solid;
+    height: 25rem;
+    position: relative;
+    // background-image: url("../../Assets/Background_Photo.jpg");
+    // background-size: cover;
+    &--img {
+      background-size: cover;
+      width: 100%;
+      height: 25rem;
+    }
+  }
+  &--photo {
+    margin-left: 5rem;
+    //  margin-top: 20rem;
+    border: 1px black solid;
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+    padding: 0.2rem;
+    border: 3px solid $Borders;
+    // position: absolute;
+    position: absolute;
+    top: 25rem;
+    &--img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &--InfoContainer {
+    display: flex;
+    justify-content: space-between;
+    &--info {
+      &--name {
+        font-size: 3rem;
+        display: inline-block;
+        margin-top: 13rem;
+        margin-left: 7rem;
+      }
+      &--jobTitle {
+        font-size: 2rem;
+        font-weight: lighter;
+        display: block;
+        margin-top: 2rem;
+        margin-left: 8rem;
+      }
+      &--location {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        display: inline-block;
+        margin-top: 1.5rem;
+        margin-left: 8rem;
+      }
+      &--connection,
+      &--contact {
+        display: inline-block;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+        font-weight: lighter;
+        font-size: 1.5rem;
+        color: $dark-blue;
+      }
+      a {
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    &--moreBtns {
+      margin: 5rem 5rem 0 0;
+      &--edu {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem;
+        //   width: 20rem;
+        display: block;
+        &--icon {
+          img {
+            width: 10%;
+            height: 10%;
+            //display: inline-block;
+          }
+        }
+        &--link {
+          font-weight: 100;
+          text-align: center;
+          font-size: 1.5rem;
+          &:hover {
+            text-decoration: underline;
+            color: $dark-blue;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
