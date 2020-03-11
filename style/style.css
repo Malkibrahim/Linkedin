@@ -10,48 +10,6 @@ html {
 .m-2x {
   margin: 0.5rem; }
 
-.nav {
-  background-color: #1e3752;
-  color: #f4eeff;
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
-  .nav--logo {
-    padding-left: 25rem;
-    width: 3%; }
-    .nav--logo--icon {
-      width: 100%; }
-  .nav--search {
-    margin-left: 2rem;
-    margin-right: 9rem; }
-    .nav--search--icon {
-      padding: 1rem;
-      color: #f4eeff; }
-    .nav--search--box {
-      display: inline-block;
-      height: 2rem;
-      padding: 0.2rem;
-      background-color: #f4eeff;
-      border-radius: 0.4rem; }
-  .nav--menu {
-    display: inline-block;
-    padding-left: 20rem;
-    list-style: none; }
-    .nav--menu--items {
-      display: inline-block;
-      padding-left: 4rem;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: color 0.2;
-      align-items: center; }
-      .nav--menu--items:hover {
-        color: #b0afb4; }
-      .nav--menu--items--icon {
-        margin-bottom: 0.7rem;
-        text-align: center; }
-      .nav--menu--items--link {
-        display: block; }
-
 .btn {
   text-decoration: none;
   font-size: 1.6rem;
@@ -111,16 +69,17 @@ html {
     -o-border-radius: 50%; }
 
 .profile {
-  margin: 5rem 20rem 20rem;
+  margin: 5rem 27rem 27rem;
   padding-bottom: 10rem;
-  border: 2px #dbdbdb solid;
-  border-radius: 0.4rem; }
+  border: 3px #dbdbdb solid; }
   .profile--background {
     border-bottom: 1.5px #dbdbdb solid;
     height: 25rem;
-    position: relative;
-    background-image: url("../../Assets/Background_Photo.jpg");
-    background-size: cover; }
+    position: relative; }
+    .profile--background--img {
+      background-size: cover;
+      width: 100%;
+      height: 25rem; }
   .profile--photo {
     margin-left: 5rem;
     border: 1px black solid;
@@ -183,3 +142,45 @@ html {
             text-decoration: underline;
             color: #006097;
             cursor: pointer; }
+
+.nav {
+  background-color: #1e3752;
+  color: #f4eeff;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .nav--logo {
+    padding-left: 25rem;
+    width: 3%; }
+    .nav--logo--icon {
+      width: 100%; }
+  .nav--search {
+    margin-left: 2rem;
+    margin-right: 9rem; }
+    .nav--search--icon {
+      padding: 1rem;
+      color: #f4eeff; }
+    .nav--search--box {
+      display: inline-block;
+      height: 2rem;
+      padding: 0.2rem;
+      background-color: #f4eeff;
+      border-radius: 0.4rem; }
+  .nav--menu {
+    display: inline-block;
+    padding-left: 20rem;
+    list-style: none; }
+    .nav--menu--items {
+      display: inline-block;
+      padding-left: 4rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.2;
+      align-items: center; }
+      .nav--menu--items:hover {
+        color: #b0afb4; }
+      .nav--menu--items--icon {
+        margin-bottom: 0.7rem;
+        text-align: center; }
+      .nav--menu--items--link {
+        display: block; }
