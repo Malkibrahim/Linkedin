@@ -1,7 +1,7 @@
 .btn {
   text-decoration: none;
-  font-size: 1.6rem;
-  padding: 0.6rem 1.2rem;
+  // font-size: 1.6rem;
+  // padding: 0.6rem 1.2rem;
   line-height: 2rem;
   border: none;
   border-radius: 2px;
@@ -54,9 +54,9 @@
   }
   &--light {
     color: $primary-color;
-    background-color: none;
+    background-color: transparent;
     .fa-plus {
-      margin: 10px;
+      margin: 0.5rem;
     }
     &:hover {
       background-color: #e5f5fc;
@@ -71,5 +71,18 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+  }
+  &--light-secondary {
+    font-size: 1.4rem;
+    color: $secondary-color;
+    background-color: transparent;
+    &:hover {
+      background-color: #f3f3f3;
+    }
+    .fa-thumbs-o-up,
+    .fa-comment-o,
+    .fa-share {
+      margin-right: 6px;
+    }
   }
 }
