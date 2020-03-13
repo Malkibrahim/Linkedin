@@ -13,5 +13,13 @@
   "devDependencies": {
     "node-sass": "^4.13.1"
   },
-  "description": ""
+  "description": "Linkedin sample",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malkibrahim/Linkedin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Malkibrahim/Linkedin/issues"
+  },
+  "homepage": "https://github.com/Malkibrahim/Linkedin#readme"
 }
