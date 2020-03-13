@@ -39,7 +39,8 @@ body {
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-size: medium; }
 
 .btn {
   text-decoration: none;
@@ -318,12 +319,12 @@ body {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     background-color: #b3b6b9;
-    padding: 2px; }
+    padding: 3px; }
     .comment-box__avatar-image .fa-user {
       font-size: x-large;
       color: #d9dde0;
-      margin-top: 2px;
-      padding-left: 6px; }
+      margin-top: 4px;
+      padding-left: 8px; }
   .comment-box form input {
     border-color: #3e3e1a38;
     padding: 11px;
@@ -357,7 +358,8 @@ body {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
   transition: box-shadow 83ms;
   height: 125px;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
   .create-post__header {
     background-color: #fff;
     display: flex;
@@ -398,7 +400,7 @@ body {
       border-radius: 0.4rem; }
   .nav--menu {
     display: inline-block;
-    padding-left: 20rem;
+    padding-left: 15rem;
     list-style: none; }
     .nav--menu--items {
       display: inline-block;
