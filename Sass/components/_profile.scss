@@ -1,20 +1,24 @@
 .profile {
-  margin: 5rem 27rem 27rem;
-  padding-bottom: 10rem;
+  margin: 5rem 8rem;
+  // margin: 5rem 27rem 27rem;
+  // padding-bottom: 10rem;
+  padding-bottom: 3rem;
   border: 3px $Borders solid;
   // height: 100rem;
   // border-radius: 0.4rem;
   // position: absolute;
   &--background {
     border-bottom: 1.5px $Borders solid;
-    height: 25rem;
+    // height: 25rem;
+    height: 14rem;
     position: relative;
     // background-image: url("../../Assets/Background_Photo.jpg");
     // background-size: cover;
     &--img {
       background-size: cover;
       width: 100%;
-      height: 25rem;
+      // height: 25rem;
+      height: 14rem;
     }
   }
   &--photo {
@@ -22,13 +26,14 @@
     //  margin-top: 20rem;
     border: 1px black solid;
     border-radius: 50%;
-    width: 20rem;
-    height: 20rem;
-    padding: 0.2rem;
+    width: 10rem;
+    height: 10rem;
+    // padding: 0.2rem;
     border: 3px solid $Borders;
     // position: absolute;
     position: absolute;
-    top: 25rem;
+    // top: 25rem;
+    top: 18rem;
     &--img {
       border-radius: 50%;
       width: 100%;
@@ -40,24 +45,31 @@
     justify-content: space-between;
     &--info {
       &--name {
-        font-size: 3rem;
+        font-size: 2rem;
+        // font-size: 3rem;
         display: inline-block;
-        margin-top: 13rem;
-        margin-left: 7rem;
+        // margin-top: 13rem;
+        // margin-left: 7rem;
+        margin-top: 7rem;
+        margin-left: 3rem;
       }
       &--jobTitle {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: lighter;
         display: block;
-        margin-top: 2rem;
-        margin-left: 8rem;
+        // margin-top: 2rem;
+        // margin-left: 8rem;
+        margin-top: 0.5rem;
+        margin-left: 3rem;
       }
       &--location {
         font-size: 1.5rem;
         font-weight: lighter;
         display: inline-block;
-        margin-top: 1.5rem;
-        margin-left: 8rem;
+        margin-top: 0.5rem;
+        margin-left: 3rem;
+        // margin-top: 1.5rem;
+        // margin-left: 8rem;
       }
       &--connection,
       &--contact {
@@ -76,12 +88,15 @@
       }
     }
     &--moreBtns {
-      margin: 5rem 5rem 0 0;
+      margin-top: 10px;
+      // margin: 5rem 5rem 0 0;
       &--edu {
-        display: flex;
-        justify-content: space-between;
-        margin: 2rem;
+        // display: flex;
+        // justify-content: space-between;
+        // margin: 2rem;
         //   width: 20rem;
+        margin-bottom: 26px;
+        margin-top: 28px;
         display: block;
         &--icon {
           img {
@@ -100,6 +115,9 @@
             cursor: pointer;
           }
         }
+      }
+      &--crud {
+        margin-left: 5rem;
       }
     }
   }

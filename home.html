@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css" />
 
@@ -11,197 +11,199 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://use.fontawesome.com/3ee71ef1c8.js"></script>
-  </head>
-  <body>
-    <div class="nav">
-      <div class="nav--logo">
-        <img class="nav--logo--icon" src="Assets/Logo.png" />
+</head>
+<body>
+       <!-- Navigation -->
+       <div class="nav">
+        <div class="nav--logo">
+          <img class="nav--logo--icon" src="Assets/Logo.png" />
+        </div>
+        <div class="nav--search">
+          <span class="nav--search--icon"
+            ><i class="fa fa-search fa-2x"></i>
+          </span>
+          <input class="nav--search--box" placeholder="Search.." />
+        </div>
+        <ul class="nav--menu">
+          <li class="nav--menu--items">
+            <div class="nav--menu--items--icon">
+              <i class="fa fa-home fa-2x"></i>
+            </div>
+            <a class="nav--menu--items--link"> Home</a>
+          </li>
+          <li class="nav--menu--items">
+            <div class="nav--menu--items--icon">
+              <i class="fa fa-users fa-2x"></i>
+            </div>
+            <a class="nav--menu--items--link">My Network</a>
+          </li>
+          <li class="nav--menu--items">
+            <div class="nav--menu--items--icon">
+              <i class="fa fa-briefcase fa-2x"></i>
+            </div>
+
+            <a class="nav--menu--items--link">Jobs</a>
+          </li>
+          <li class="nav--menu--items">
+            <div class="nav--menu--items--icon">
+              <i class="fa fa-comments fa-2x"></i>
+            </div>
+
+            <a class="nav--menu--items--link">Messagings</a>
+          </li>
+          <li class="nav--menu--items">
+            <div class="nav--menu--items--icon">
+              <i class="fa fa-bell fa-2x"></i>
+            </div>
+
+            <a class="nav--menu--items--link">Notification</a>
+          </li>
+          <li class="nav--menu--items">
+            <a class="nav--menu--items--link">Me</a>
+          </li>
+        </ul>
+        <!-- Navigation -->
       </div>
-      <div class="nav--search">
-        <span class="nav--search--icon"
-          ><i class="fa fa-search fa-2x"></i>
-        </span>
-        <input class="nav--search--box" placeholder="Search.." />
-      </div>
-      <ul class="nav--menu">
-        <li class="nav--menu--items">
-          <div class="nav--menu--items--icon">
-            <i class="fa fa-home fa-2x"></i>
-          </div>
-          <a class="nav--menu--items--link"> Home</a>
-        </li>
-        <li class="nav--menu--items">
-          <div class="nav--menu--items--icon">
-            <i class="fa fa-users fa-2x"></i>
-          </div>
-          <a class="nav--menu--items--link">My Network</a>
-        </li>
-        <li class="nav--menu--items">
-          <div class="nav--menu--items--icon">
-            <i class="fa fa-briefcase fa-2x"></i>
-          </div>
-
-          <a class="nav--menu--items--link">Jobs</a>
-        </li>
-        <li class="nav--menu--items">
-          <div class="nav--menu--items--icon">
-            <i class="fa fa-comments fa-2x"></i>
-          </div>
-
-          <a class="nav--menu--items--link">Messagings</a>
-        </li>
-        <li class="nav--menu--items">
-          <div class="nav--menu--items--icon">
-            <i class="fa fa-bell fa-2x"></i>
-          </div>
-
-          <a class="nav--menu--items--link">Notification</a>
-        </li>
-        <li class="nav--menu--items">
-          <a class="nav--menu--items--link">Me</a>
-        </li>
-      </ul>
-      <!-- Navigation -->
     </div>
-    <!--create post-->
-    <div class="create-post container">
-      <div class="create-post__header">
-        <a href="#" class="btn--outline-primary bold p-lg"
-          ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Start a
-          post</a
-        >
-        <div class="icons">
-          <button class="btn btn--light-secondary p-xlg b-left ">
-            <i class="fa fa-camera" aria-hidden="true"></i>
-          </button>
-          <button class="btn btn--light-secondary p-xlg b-left">
-            <i class="fa fa-video-camera" aria-hidden="true"></i>
-          </button>
-          <button class="btn btn--light-secondary p-xlg b-left">
-            <i class="fa fa-file-text-o" aria-hidden="true"></i>
-          </button>
+<!--create post-->
+      <div class="create-post container">
+        <div class="create-post__header">
+          <a href="#" class="btn--outline-primary bold p-lg"
+            ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Start a
+            post</a
+          >
+          <div class="icons">
+            <button class="btn btn--light-secondary p-xlg b-left ">
+              <i class="fa fa-camera" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn--light-secondary p-xlg b-left">
+              <i class="fa fa-video-camera" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn--light-secondary p-xlg b-left">
+              <i class="fa fa-file-text-o" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="create-post__footer ">
+          <a
+            class=" create-post__footer link"
+            href="https://www.linkedin.com/post/new"
+            >Write an article</a
+          >
+          <span class="create-post__footer__content lighter">LinkedIn</span>
         </div>
       </div>
-      <div class="create-post__footer ">
-        <a
-          class=" create-post__footer link"
-          href="https://www.linkedin.com/post/new"
-          >Write an article</a
-        >
-        <span class="create-post__footer__content lighter">LinkedIn</span>
-      </div>
-    </div>
-    <!--create post-->
-    <!--post-->
-    <div class="post container m-b">
-      <div class="post__header">
-        <div class="post-info">
+      <!--create post-->
+      <!--post-->
+      <div class="post container m-b">
+        <div class="post__header">
+          <div class="post-info">
+            <img
+              src="https://media-exp1.licdn.com/dms/image/C560BAQHYyjZVOa4b1A/company-logo_100_100/0?e=1591833600&v=beta&t=aLQIqQUNb_5tq-WuHTVGKRdxHlO2j50lO30gUsCutaY"
+              alt=""
+              srcset=""
+            />
+            <div class="post-info__content">
+              <span class="link"> LinkedIn Marketing Solutions</span>
+              <span>3,974,294 followers</span>
+              <span>Promoted</span>
+            </div>
+            <div class="post-info__button">
+              <button class="btn btn--light p-sm">
+                <i class="fa fa-plus" aria-hidden="true"></i>Follow
+              </button>
+              <button class="btn btn--light-secondary btn--circle p-sm">
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="post__content">
+          <p>
+            You’re only a few steps away from generating high-quality leads on
+            LinkedIn. Get started with LinkedIn ads.
+          </p>
           <img
-            src="https://media-exp1.licdn.com/dms/image/C560BAQHYyjZVOa4b1A/company-logo_100_100/0?e=1591833600&v=beta&t=aLQIqQUNb_5tq-WuHTVGKRdxHlO2j50lO30gUsCutaY"
+            src="https://media-exp1.licdn.com/dms/image/sync/C4E18AQH9BZAHZOw1Hg/companyUpdate-article-image-shrink_627_1200/0?e=1586995200&v=beta&t=eN67_JhHsEnqLE00PZzKmYP8qxO4nGtaRrSXbOTbS7M"
             alt=""
             srcset=""
           />
-          <div class="post-info__content">
-            <span class="link"> LinkedIn Marketing Solutions</span>
-            <span>3,974,294 followers</span>
-            <span>Promoted</span>
+        </div>
+        <div class="post__footer p-lg">
+          <div class="count-social">
+            <ul>
+              <li><i class="fa fa-thumbs-up" aria-hidden="true"></i></li>
+              <li><i class="fa fa-gratipay" aria-hidden="true"></i></li>
+              <li>
+                <a href="#" class="btn--outline-primary bold">62,331</a>
+              </li>
+              <li>
+                <a href="#" class="btn--outline-primary bold">1,697 Comments</a>
+              </li>
+            </ul>
           </div>
-          <div class="post-info__button">
-            <button class="btn btn--light p-sm">
-              <i class="fa fa-plus" aria-hidden="true"></i>Follow
+          <div class="social">
+            <button class="btn btn--light-secondary p-md ">
+              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Like
             </button>
-            <button class="btn btn--light-secondary btn--circle p-sm">
-              <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            <button class="btn btn--light-secondary p-md ">
+              <i class="fa fa-comment-o" aria-hidden="true"></i>Comment
+            </button>
+            <button class="btn btn--light-secondary p-md ">
+              <i class="fa fa-share" aria-hidden="true"></i>Share
             </button>
           </div>
-        </div>
-      </div>
-      <div class="post__content">
-        <p>
-          You’re only a few steps away from generating high-quality leads on
-          LinkedIn. Get started with LinkedIn ads.
-        </p>
-        <img
-          src="https://media-exp1.licdn.com/dms/image/sync/C4E18AQH9BZAHZOw1Hg/companyUpdate-article-image-shrink_627_1200/0?e=1586995200&v=beta&t=eN67_JhHsEnqLE00PZzKmYP8qxO4nGtaRrSXbOTbS7M"
-          alt=""
-          srcset=""
-        />
-      </div>
-      <div class="post__footer p-lg">
-        <div class="count-social">
-          <ul>
-            <li><i class="fa fa-thumbs-up" aria-hidden="true"></i></li>
-            <li><i class="fa fa-gratipay" aria-hidden="true"></i></li>
-            <li>
-              <a href="#" class="btn--outline-primary bold">62,331</a>
-            </li>
-            <li>
-              <a href="#" class="btn--outline-primary bold">1,697 Comments</a>
-            </li>
-          </ul>
-        </div>
-        <div class="social">
-          <button class="btn btn--light-secondary p-md ">
-            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Like
-          </button>
-          <button class="btn btn--light-secondary p-md ">
-            <i class="fa fa-comment-o" aria-hidden="true"></i>Comment
-          </button>
-          <button class="btn btn--light-secondary p-md ">
-            <i class="fa fa-share" aria-hidden="true"></i>Share
-          </button>
-        </div>
-        <div class="comment-box">
-          <div class="comment-box__avatar-image">
-            <i class="fa fa-user" aria-hidden="true"></i>
-          </div>
-          <div class="comment-box__form-container">
-            <form>
-              <input
-                autofocus
-                type="text"
-                placeholder="Add a comment..."
-                size="77"
-              />
-            </form>
-          </div>
-        </div>
-
-        <div class="comments-list">
-          <div class="comment-box__avatar-image">
-            <i class="fa fa-user" aria-hidden="true"></i>
-          </div>
-          <div class="comments-list__header">
-            <div class="comments-list__header__top ">
-              <div class="post-info__content   ">
-                <span class="link"> Mohanad Darwish</span>
-                <span>Embedded Software Engineer at Valeo</span>
-              </div>
-
-              <div class="comments-list__header__top__right">
-                <span class="time">1w</span>
-                <button class="btn btn--light-secondary  p-sm">
-                  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                </button>
-              </div>
+          <div class="comment-box">
+            <div class="comment-box__avatar-image">
+              <i class="fa fa-user" aria-hidden="true"></i>
             </div>
-
-            <div class="comments-list__header__bottom  ">
-              <p>You are the best dear,,,,, so proud of You 👏👏 (edited)</p>
+            <div class="comment-box__form-container">
+              <form>
+                <input
+                  autofocus
+                  type="text"
+                  placeholder="Add a comment..."
+                  size="65"
+                />
+              </form>
             </div>
           </div>
-        </div>
-
-        <div class="comment-footer m-l">
-          <button class="btn btn--light-secondary p-sm ">
-            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-          </button>
-          <button class="btn btn--light-secondary p-sm ">
-            <i class="fa fa-comment-o" aria-hidden="true"></i>
-          </button>
+  
+          <div class="comments-list">
+            <div class="comment-box__avatar-image">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            <div class="comments-list__header">
+              <div class="comments-list__header__top ">
+                <div class="post-info__content   ">
+                  <span class="link"> Mohanad Darwish</span>
+                  <span>Embedded Software Engineer at Valeo</span>
+                </div>
+  
+                <div class="comments-list__header__top__right">
+                  <span class="time">1w</span>
+                  <button class="btn btn--light-secondary  p-sm">
+                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+  
+              <div class="comments-list__header__bottom  ">
+                <p>You are the best dear,,,,, so proud of You 👏👏 (edited)</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="comment-footer m-l">
+            <button class="btn btn--light-secondary p-sm ">
+              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn--light-secondary p-sm ">
+              <i class="fa fa-comment-o" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <!--post-->
-  </body>
+       <!--post-->
+</body>
 </html>
