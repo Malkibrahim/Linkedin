@@ -1,0 +1,10 @@
+.WholeForm {
+  background-color: black;
+}
+.form {
+  &__section {
+    &__sp {
+      display: inline-block;
+    }
+  }
+}
