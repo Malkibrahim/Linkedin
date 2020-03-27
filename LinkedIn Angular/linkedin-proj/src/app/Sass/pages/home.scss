@@ -1,0 +1,33 @@
+.create-post {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 83ms;
+  //   background-color: rgb(161, 161, 159);
+  height: 125px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  &__header {
+    background-color: #fff;
+    // padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    .icons {
+      float: right;
+    }
+  }
+  &__footer {
+    background-color: #f3f6f8;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 12px 16px;
+    border-radius: 0 0 2px 2px;
+    font-size: 1.4rem;
+    line-height: 1.42857;
+
+    &__content {
+      color: $secondary-color;
+    }
+  }
+}
