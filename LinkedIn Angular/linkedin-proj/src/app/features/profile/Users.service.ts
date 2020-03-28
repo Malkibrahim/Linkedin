@@ -91,6 +91,11 @@ export class UserService {
   getById(id: number): User {
     return this.users.find(a => a.id === id);
   }
+  getIndex(name: string): number {
+    const index = this.users.findIndex(a => a.name === name);
+    return index;
+    // this.users.find(a => a.name === name);
+  }
 
   //   Update (userr:User){
   //       const index = this.users.findIndex(a => a.id === user.id);

@@ -6,6 +6,7 @@ import {
   ElementRef
 } from "@angular/core";
 import { EventEmitter } from "@angular/core";
+import { UserService } from "./../../features/profile/Users.service";
 
 @Component({
   selector: "app-navigation",
@@ -18,9 +19,12 @@ export class NavigationComponent implements OnInit {
   @Output()
   searchItem = new EventEmitter<any>();
 
-  constructor() {}
+  constructor(public userService: UserService) {}
 
-  ngOnInit() {
-    console.log((this.searchBox.nativeElement as HTMLInputElement).value);
+  ngOnInit() {}
+  getValue() {
+    var data = (this.searchBox.nativeElement as HTMLInputElement).value;
+    console.log(data);
+    this.userService.getIndex(data);
   }
 }
