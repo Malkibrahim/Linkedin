@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
+import { User } from "./../../_model/user";
 
 @Component({
-  selector: 'app-section',
-  templateUrl: './section.component.html',
-  styleUrls: ['./section.component.scss']
+  selector: "app-section",
+  templateUrl: "./section.component.html",
+  styleUrls: ["./section.component.scss"]
 })
 export class SectionComponent implements OnInit {
-
-  constructor() { }
+  @Input()
+  user: User;
+  constructor() {}
 
   ngOnInit() {
+    console.log(this.user);
   }
-
 }

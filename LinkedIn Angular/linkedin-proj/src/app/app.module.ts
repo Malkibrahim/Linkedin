@@ -12,6 +12,7 @@ import { CreatePostComponent } from "./features/post/create-post/create-post.com
 import { AddPostComponent } from "./features/post/add-post/add-post.component";
 import { AddCommentComponent } from "./features/post/add-comment/add-comment.component";
 import { ErrorPageComponent } from "./layout/error-page/error-page.component";
+import { UserService } from "./features/profile/Users.service";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,11 @@ import { ErrorPageComponent } from "./layout/error-page/error-page.component";
       { path: "**", component: ErrorPageComponent }
     ])
   ],
-  providers: [],
+  // providers: [],
+  //   SectionComponent
+  // ],
+  // imports: [BrowserModule],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
