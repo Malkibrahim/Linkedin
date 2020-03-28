@@ -23,7 +23,7 @@
           <span class="nav--search--icon"
             ><i class="fa fa-search fa-2x"></i>
           </span>
-          <input class="nav--search--box" placeholder="Search.." />
+          <input class="nav--search--box" size="40"placeholder="Search.." />
         </div>
         <ul class="nav--menu">
           <li class="nav--menu--items">
@@ -60,6 +60,9 @@
             <a class="nav--menu--items--link">Notification</a>
           </li>
           <li class="nav--menu--items">
+            <div class="nav--menu--items--icon">
+              <i class="fa fa-user fa-2x aria-hidden="true"></i>
+            </div>
             <a class="nav--menu--items--link">Me</a>
           </li>
         </ul>
@@ -68,85 +71,99 @@
     </div>
     <!-- profile -->
     <div class="profile">
-      <div class="profile--background">
-        <img
-          class="profile--background--img "
-          src="Assets/Background_Photo.jpg"
-        />
-      </div>
-      <div class="profile--photo">
-        <img class="profile--photo--img " src="Assets/profile-photo.jpg" />
-      </div>
-      <div class="profile--InfoContainer">
-        <div class="profile--InfoContainer--info">
-          <a class="profile--InfoContainer--info--name"> Malak Ibrahim </a>
-          <span class="profile--InfoContainer--info--jobTitle"
-            >Web Developer</span
-          >
-          <a class="profile--InfoContainer--info--location">Egypt .</a>
-          <a class="profile--InfoContainer--info--connection"
-            >0 Connections .</a
-          >
-          <a class="profile--InfoContainer--info--contact">Contact info .</a>
-          <a class="profile--InfoContainer--info--workPlace"><img /></a>
+      <div class="container">
+        <div class="profile--details">
+        <div class="profile--details--background">
+          <img
+            class="profile--details--background--img "
+            src="Assets/Background_Photo.jpg"
+          />
         </div>
-        <div class="profile--InfoContainer--moreBtns">
-          <div class="profile--InfoContainer--moreBtns--crud">
-            <button class="btn btn--primary m-2x p-lr ">
-              Add profile section
-              <i class="fa fa-caret-down" aria-hidden="true"></i>
-            </button>
-            <button class="btn btn--outline-secondary m-2x p-lr">
-              More...
-            </button>
-            <button class="btn btn--light btn--circle ">
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-            </button>
-          </div>
-          <div class="profile--InfoContainer--moreBtns--edu">
-            <span class="profile--InfoContainer--moreBtns--edu--icon">
-              <img src="assets/iti.png" />
-            </span>
-            <a class="profile--InfoContainer--moreBtns--edu--link">
-              Information technology institute</a
+        <div class="profile--details--photo">
+          <img class="profile--details--photo--img " src="Assets/profile-photo.jpg" />
+        </div>
+        <div class="profile--details--InfoContainer">
+          <div class="profile--details--InfoContainer--info">
+            <a class="profile--details--InfoContainer--info--name"> Malak Ibrahim </a>
+            <span class="profile--details--InfoContainer--info--jobTitle"
+              >Web Developer</span
             >
-          </div>
-          <div class="profile--InfoContainer--moreBtns--edu">
-            <span class="profile--InfoContainer--moreBtns--edu--icon">
-              <img src="assets/suez-canal.png" />
-            </span>
-            <a class="profile--InfoContainer--moreBtns--edu--link">
-              Suez Canal University</a
+            <a class="profile--details--InfoContainer--info--location">Egypt .</a>
+            <a class="profile--details--InfoContainer--info--connection"
+              >0 Connections .</a
             >
+            <a class="profile--details--InfoContainer--info--contact">Contact info .</a>
+            <a class="profile--details--InfoContainer--info--workPlace"><img /></a>
+          </div>
+          <div class="profile--details--InfoContainer--moreBtns">
+            <div class="profile--details--InfoContainer--moreBtns--crud">
+              <button class="btn btn--primary m-2x p-lr ">
+                Add profile section
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </button>
+              <button class="btn btn--outline-secondary m-2x p-lr">
+                More...
+              </button>
+              <button class="btn btn--light btn--circle ">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="profile--details--InfoContainer--moreBtns--edu">
+              <span class="profile--details--InfoContainer--moreBtns--edu--icon">
+                <img src="assets/iti.png" />
+              </span>
+              <a class="profile--details--InfoContainer--moreBtns--edu--link">
+                Information technology institute</a
+              >
+            </div>
+            <div class="profile--details--InfoContainer--moreBtns--edu">
+              <span class="profile--details--InfoContainer--moreBtns--edu--icon">
+                <img src="assets/suez-canal.png" />
+              </span>
+              <a class="profile--details--InfoContainer--moreBtns--edu--link">
+                Suez Canal University</a
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Profile -->
+      <!-- </div> -->
+      <!-- Profile -->
 
-    <!-- Sectionss -->
+      <!-- Sectionss -->
 
-    <div class="profile">
+      <!-- <div class="profile"> -->
       <div class="section">
-        <div class="section__container">
-          <div class="section__title">Education</div>
-          <img class="section__container__img" src="assets/iti.png" />
-          <div class="section__container__info">
-            <div class="section__container__info__title">Student</div>
-            <div>Oct-2019</div>
-            <div>Location</div>
-            <div>9-months trainee</div>
-            <div>Web&user intefrace</div>
+        
+          <div class="section__title">
+            <span>Education</span>
+            <button class="btn btn--light btn--circle ">
+              <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+            </button>
           </div>
-        </div>
-        <div class="section__Btns">
-          <button class="btn btn--light btn--circle m-2x">
-            <i class="fa fa-plus fa-1x" aria-hidden="true"></i>
-          </button>
+          <div class="section__container">
+          <div class="section__container__info">
+            <div class="post-info">
+              <img
+              class="section__container__img"
+                src="assets/iti.png"
+                alt=""
+                srcset=""
+              />
+              <div class="post-info__content">
+                <h2 > Student</h2>
+                <div>Oct-2019</div>
+                <div>Location</div>
+                <div>9-months trainee</div>
+                <div>Web&user intefrace</div>
+              </div>
+            </div>
+          </div>
           <button class="btn btn--light btn--circle m-2x">
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </button>
         </div>
+      </div>
       </div>
     </div>
     <!-- Sectionss -->
@@ -200,11 +217,8 @@
       <!-- profile -->
 
       <!--buttons-->
-      <button class="btn btn--secondary">Post</button>
-      <button class="btn btn--outline-secondary">
-        <i class="fa fa-globe" aria-hidden="true"></i>
-        Anyone<i class="fa fa-caret-down" aria-hidden="true"></i>
-      </button>
+     
+     
 
       <!--buttons-->
     </div>

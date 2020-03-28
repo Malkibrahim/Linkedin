@@ -19,7 +19,12 @@
 .p-xlg {
   padding: 1.7rem;
 }
-
+.p-xxlg {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 600;
+  padding: 0.2rem 1.5rem;
+}
 .p-md {
   padding: 1.2rem 0.5rem;
 }
@@ -31,4 +36,13 @@
 }
 .p-lr {
   padding: 0 1rem;
+}
+.p-xxxlg {
+  padding: 2.8rem;
+}
+.f-r {
+  float: right;
+}
+.m-t {
+  margin-top: 0.8rem;
 }
