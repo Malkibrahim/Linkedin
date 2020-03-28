@@ -5,12 +5,18 @@ import { AppComponent } from "./app.component";
 import { NavigationComponent } from "./layout/navigation/navigation.component";
 import { UserInfoComponent } from "./features/profile/user-info/user-info.component";
 import { from } from "rxjs";
-import { SectionComponent } from './shared/section/section.component';
+import { SectionComponent } from "./shared/section/section.component";
+import { UserService } from "./features/profile/Users.service";
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, UserInfoComponent, SectionComponent],
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+    UserInfoComponent,
+    SectionComponent
+  ],
   imports: [BrowserModule],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,17 +1,39 @@
-import { User } from "./user";
-export class ProductService {
+import { User } from "../../_model/user";
+export class UserService {
   private users: User[] = [
     {
       id: 1,
       name: "Malak Ibarhim",
+      jopTitle: "Web Developer",
+      location: "Egypt",
       connections: 500,
-      imgUrl: "aaaa",
+      imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrlBG: "../../assets/images/Background_Photo.jpg",
       exp: [
         {
           id: 1,
-          title: "Student",
+          title: "Trainee",
           location: "Al Asmaili'yah ,Egypt",
-          company: { id: 1, name: "ITI Information Techonology (ITI)" },
+          company: {
+            id: 1,
+            name: "ITI Information Techonology (ITI)",
+            compLogo: "../../assets/images/iti.png"
+          },
+
+          startDate: "Oct 2019",
+          endDate: "sept 2020",
+          description: "9-months trainee"
+        },
+        {
+          id: 2,
+          title: "Manager",
+          location: "Al Asmaili'yah ,Egypt",
+          company: {
+            id: 1,
+            name: " Vodafone",
+            compLogo: "../../assets/images/suez-canal.png"
+          },
+
           startDate: "Oct 2019",
           endDate: "sept 2020",
           description: "pala pla pla"
@@ -28,14 +50,24 @@ export class ProductService {
     {
       id: 2,
       name: "Mariam Magdy",
+      jopTitle: "Front-End Developer",
+      location: "New York",
+
       connections: 600,
-      imgUrl: "aaaa",
+      imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrlBG: "../../assets/images/Background_Photo.jpg",
+
       exp: [
         {
           id: 1,
           title: "Student",
           location: "Al Asmaili'yah ,Egypt",
-          company: { id: 1, name: "ITI Information Techonology (ITI)" },
+          company: {
+            id: 1,
+            name: "ITI Information Techonology (ITI)",
+            compLogo: "../../assets/images/suez-canal.png"
+          },
+
           startDate: "Oct 2019",
           endDate: "sept 2020",
           description: "pala pla pla"
