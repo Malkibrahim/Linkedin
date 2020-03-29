@@ -34,11 +34,13 @@ import { CompanyService } from "./features/profile/add-section/company.service";
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: "", redirectTo: "/home", pathMatch: "full" },
-      { path: "home", component: CreatePostComponent },
+      { path: "", redirectTo: "/home/1", pathMatch: "full" },
+      // { path: "home", component: CreatePostComponent },
       { path: "home/:id", component: CreatePostComponent },
       { path: "profile/:id", component: UserInfoComponent },
       { path: "profile", component: UserInfoComponent },
+      { path: "add-post", component: AddPostComponent },
+      { path: "add-post/:id", component: AddPostComponent },
       { path: "form", component: AddSectionComponent },
       { path: "**", component: ErrorPageComponent }
     ])

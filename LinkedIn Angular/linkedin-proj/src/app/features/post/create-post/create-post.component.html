@@ -56,7 +56,10 @@
   <div class="middle">
     <div class="create-post">
       <div class="create-post__header">
-        <a href="#" class="btn--outline-primary bold p-lg"
+        <a
+          routerLink="/add-post"
+          (click)="onCreatePost(user)"
+          class="btn--outline-primary bold p-lg"
           ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Start a
           post</a
         >
@@ -83,7 +86,12 @@
     </div>
     <!--create post-->
     <!--post-->
-    <div class="post m-b" #post *ngFor="let com of community; let i = index">
+    <div
+      class="post m-b"
+      #post
+      *ngFor="let com of community; let i = index"
+      id="{{ com }}"
+    >
       <div class="post__header">
         <div class="post-info">
           <img
@@ -130,10 +138,16 @@
           </ul>
         </div>
         <div class="social">
-          <button class="btn btn--light-secondary p-md ">
+          <button
+            (click)="incrementLikes(community[i].post)"
+            class="btn btn--light-secondary p-md "
+          >
             <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Like
           </button>
-          <button class="btn btn--light-secondary p-md ">
+          <button
+            class="btn btn--light-secondary p-md "
+            (click)="showComments()"
+          >
             <i class="fa fa-comment-o" aria-hidden="true"></i>Comment
           </button>
           <button class="btn btn--light-secondary p-md ">
@@ -141,7 +155,10 @@
           </button>
         </div>
         <!--add-comment-->
-        <app-add-comment [comments]="com.post.comments"></app-add-comment>
+        <app-add-comment
+          [ngClass]="{ show: isOpen, hide: !isOpen }"
+          [post]="com.post"
+        ></app-add-comment>
       </div>
     </div>
   </div>

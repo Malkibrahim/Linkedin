@@ -3,7 +3,8 @@ import {
   OnInit,
   Input,
   AfterViewInit,
-  OnChanges
+  OnChanges,
+  SimpleChanges
 } from "@angular/core";
 import { CommunityService } from "../community.service";
 import { UserService } from "../../profile/Users.service";
@@ -18,7 +19,9 @@ import { User } from "src/app/_model/user";
 export class AddCommentComponent implements OnInit, OnChanges {
   // community = [];
   newComment: Comment;
-  @Input() comments;
+  // @Input() comments;
+
+  @Input() post;
   user: User;
   constructor(
     public communityService: CommunityService,
@@ -29,10 +32,20 @@ export class AddCommentComponent implements OnInit, OnChanges {
     //   this.community = this.communityService.getAll();
     // console.log(this.comments[0].userId);
   }
-  ngOnChanges() {}
-  onAdd(comment) {
-    let id = parseInt(this.route.snapshot.paramMap.get("id"));
-    this.newComment = comment.value;
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+  }
+  onAdd(Newcomment) {
+    console.log(Newcomment);
+    let userId = parseInt(this.route.snapshot.paramMap.get("id"));
+    let comment = Newcomment.value;
+    let id = this.post.comments.length;
+    let newComment = { id: id, comment: comment, userId: userId };
+    // this.post.comments.push(newComment);
+    // console.log(this.post.id);
+    this.communityService.update(this.post.id, newComment);
+    Newcomment.value = "";
+    return this.post.comments;
   }
   getUserName(i: number) {
     // console.log(i);

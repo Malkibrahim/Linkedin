@@ -2,7 +2,7 @@ import { User } from "../../_model/user";
 
 import { Injectable } from "@angular/core";
 import { EventEmitter } from "@angular/core";
-import { Experience } from "./../../_model/experience";
+// import { Experience } from "./../../_model/experience";
 @Injectable({
   providedIn: "root"
 })
@@ -55,33 +55,6 @@ export class UserService {
 
       connections: 600,
 
-      imgUrl: "../../assets/images/profile-photo.jpg",
-      imgUrlBG: "../../assets/images/Background_Photo.jpg",
-
-      exp: [
-        {
-          id: 1,
-          title: "Student",
-          location: "Al Asmaili'yah ,Egypt",
-          company: {
-            id: 1,
-            name: "ITI Information Techonology (ITI)",
-            compLogo: "../../assets/images/suez-canal.png"
-          },
-
-          startDate: "Oct 2019",
-          endDate: "sept 2020",
-          description: "pala pla pla"
-        }
-      ]
-    },
-    {
-      id: 3,
-      name: "Salma Wagdy",
-      jopTitle: "Front-End Developer",
-      location: "New York",
-
-      connections: 600,
       imgUrl: "../../assets/images/profile-photo.jpg",
       imgUrlBG: "../../assets/images/Background_Photo.jpg",
 

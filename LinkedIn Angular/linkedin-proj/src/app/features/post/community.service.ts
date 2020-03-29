@@ -2,6 +2,7 @@
 import { Community } from "src/app/_model/community";
 import { UserService } from "./../profile/Users.service";
 import { Injectable } from "@angular/core";
+import { Comments } from "src/app/_model/comment";
 @Injectable({
   providedIn: "root"
 })
@@ -21,7 +22,8 @@ export class CommunityService {
             comment: "You are the best dear,,,,, so proud of You 👏👏 (edited)",
             userId: 3
           }
-        ]
+        ],
+        like: 2
       }
     },
     {
@@ -36,16 +38,16 @@ export class CommunityService {
       }
     },
     {
-      id: 2,
+      id: 3,
       post: {
-        id: 2,
+        id: 3,
         post: "HI I'M Using LinkedIn :d",
         userId: 2,
         img:
           "https://www.socialchamp.io/blog/wp-content/uploads/2019/09/schedule-posts-on-linkedin-1.jpg",
         comments: [
           {
-            id: 2,
+            id: 1,
             comment:
               "Looking for people to book travel from home 🛩️🚗🏢🛳️🏡 being a travel agent has some great perks!💯 Free cruises and hotel stays. We will train you! Inbox me 📨or message me here👇",
             userId: 1
@@ -76,5 +78,16 @@ export class CommunityService {
   getUserName(i: number) {
     console.log(i);
     return i;
+  }
+  update(postid: number, newComment: Comments) {
+    // console.log(newComment);
+    for (var i = 0; i < this.community.length; i++) {
+      if (this.community[i].id === postid) {
+        this.community[i].post.comments.push(newComment);
+      }
+    }
+  }
+  Add(newCommmunity: Community) {
+    this.community.push(newCommmunity);
   }
 }

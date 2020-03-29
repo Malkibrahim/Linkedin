@@ -10,7 +10,7 @@
       <i class="fa fa-user-circle-o" aria-hidden="true"></i>
     </span>
     <div class="post-info__content">
-      <span> Mariam Magdy</span>
+      <span> {{ user.name }}</span>
       <button class="btn btn--outline-secondary p-xxlg">
         <i class="fa fa-globe" aria-hidden="true"></i>
         Anyone<i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -19,6 +19,9 @@
   </div>
   <div class="add-post__body">
     <input
+      ngForm
+      name="post"
+      #post
       type="text"
       size="40"
       placeholder="What do you think to talk about?"
@@ -38,7 +41,13 @@
       <button class="btn btn--light-secondary p-xlg b-left">
         <i class="fa fa-file-text-o" aria-hidden="true"></i>
       </button>
-      <button class="btn btn--primary p-xxlg f-r m-t">Post</button>
+      <button
+        routerLink="/home"
+        (click)="onPost(user)"
+        class="btn btn--primary p-xxlg f-r m-t"
+      >
+        Post
+      </button>
     </div>
   </div>
 </div>

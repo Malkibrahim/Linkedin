@@ -1,8 +1,8 @@
 import {
   Component,
-  OnInit,
-  ViewChild,
-  ElementRef
+  OnInit
+  // ViewChild,
+  // ElementRef
   // AfterViewInit
 } from "@angular/core";
 import { CommunityService } from "../community.service";
@@ -10,6 +10,7 @@ import { Community } from "src/app/_model/community";
 import { User } from "src/app/_model/user";
 import { UserService } from "../../profile/Users.service";
 import { ActivatedRoute } from "@angular/router";
+import { Router } from "@angular/router";
 @Component({
   selector: "app-create-post",
   templateUrl: "./create-post.component.html",
@@ -20,11 +21,12 @@ export class CreatePostComponent implements OnInit {
   community: Community[];
   user: User;
   userId;
-  @ViewChild("post", { static: false }) post: ElementRef;
+  isOpen = false;
   constructor(
     public communityService: CommunityService,
     public userService: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
   ngOnInit() {
     this.community = this.communityService.getAll();
@@ -41,5 +43,21 @@ export class CreatePostComponent implements OnInit {
     this.user = this.userService.getById(i);
     // console.log(this.user);
     return this.user.name;
+  }
+
+  incrementLikes(post) {
+    for (let i = 0; i < this.community.length; i++) {
+      if (this.community[i].post.id === post.id) {
+        this.community[i].post.like++;
+        console.log(post.id);
+      }
+    }
+  }
+  onCreatePost(user) {
+    this.router.navigate(["/add-post", this.userId]);
+    console.log(user);
+  }
+  showComments() {
+    this.isOpen = true;
   }
 }
