@@ -1,5 +1,5 @@
 import { Experience } from "./experience";
-import { Community } from "./community";
+// import { Community } from "./community";
 export interface User {
   id?: number;
   name?: string;
@@ -7,7 +7,7 @@ export interface User {
   connections?: number;
   location?: string;
   imgUrl?: string;
-  imgUrlBG: string;
+  imgUrlBG?: string;
   exp?: Experience[];
-  community?: Community[];
+  // community?: Community[];
 }

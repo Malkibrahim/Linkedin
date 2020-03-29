@@ -3,15 +3,14 @@
   <div class="left">
     <div class="side-card">
       <div class="side-card--header">
-        <img
-          class="side-card--header--image"
-          src="../../../../assets/header.jpg"
-        />
+        <img class="side-card--header--image" [src]="user.imgUrlBG" />
       </div>
-      <div class="side-card--profile"></div>
+      <div class="side-card--profile">
+        <img class="side-card--profile--image" [src]="user.imgUrl" />
+      </div>
       <div class="side-card--identify">
-        <h3 class="side-card--identify--name">Max Hans</h3>
-        <p class="side-card--identify--title">Web Developer</p>
+        <h3 class="side-card--identify--name">{{ getUserName(userId) }}</h3>
+        <p class="side-card--identify--title">{{ user.jopTitle }}</p>
       </div>
       <div class="side-card--card-info">
         <div class="side-card--card-info--line">
@@ -84,7 +83,7 @@
     </div>
     <!--create post-->
     <!--post-->
-    <div class="post m-b">
+    <div class="post m-b" #post *ngFor="let com of community; let i = index">
       <div class="post__header">
         <div class="post-info">
           <img
@@ -93,7 +92,7 @@
             srcset=""
           />
           <div class="post-info__content">
-            <span class="link"> LinkedIn Marketing Solutions</span>
+            <span class="link"> {{ getUserName(com.post.userId) }}</span>
             <span>3,974,294 followers</span>
             <span>Promoted</span>
           </div>
@@ -109,14 +108,9 @@
       </div>
       <div class="post__content">
         <p>
-          You’re only a few steps away from generating high-quality leads on
-          LinkedIn. Get started with LinkedIn ads.
+          {{ com.post.post }}
         </p>
-        <img
-          src="https://media-exp1.licdn.com/dms/image/sync/C4E18AQH9BZAHZOw1Hg/companyUpdate-article-image-shrink_627_1200/0?e=1586995200&v=beta&t=eN67_JhHsEnqLE00PZzKmYP8qxO4nGtaRrSXbOTbS7M"
-          alt=""
-          srcset=""
-        />
+        <img [src]="com.post.img" alt="" srcset="" />
       </div>
       <div class="post__footer p-lg">
         <div class="count-social">
@@ -124,10 +118,14 @@
             <li><i class="fa fa-thumbs-up" aria-hidden="true"></i></li>
             <li><i class="fa fa-gratipay" aria-hidden="true"></i></li>
             <li>
-              <a href="#" class="btn--outline-primary bold">62,331</a>
+              <a href="#" class="btn--outline-primary bold">{{
+                com.post.like
+              }}</a>
             </li>
             <li>
-              <a href="#" class="btn--outline-primary bold">1,697 Comments</a>
+              <a href="#" class="btn--outline-primary bold"
+                >{{ com.post.comments.length }} Comments</a
+              >
             </li>
           </ul>
         </div>
@@ -143,40 +141,7 @@
           </button>
         </div>
         <!--add-comment-->
-        <app-add-comment></app-add-comment>
-        <div class="comments-list">
-          <div class="comment-box__avatar-image">
-            <i class="fa fa-user" aria-hidden="true"></i>
-          </div>
-          <div class="comments-list__header">
-            <div class="comments-list__header__top ">
-              <div class="post-info__content   ">
-                <span class="link"> Mohanad Darwish</span>
-                <span>Embedded Software Engineer at Valeo</span>
-              </div>
-
-              <div class="comments-list__header__top__right">
-                <span class="time">1w</span>
-                <button class="btn btn--light-secondary  p-sm">
-                  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="comments-list__header__bottom  ">
-              <p>You are the best dear,,,,, so proud of You 👏👏 (edited)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="comment-footer m-l">
-          <button class="btn btn--light-secondary p-sm ">
-            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-          </button>
-          <button class="btn btn--light-secondary p-sm ">
-            <i class="fa fa-comment-o" aria-hidden="true"></i>
-          </button>
-        </div>
+        <app-add-comment [comments]="com.post.comments"></app-add-comment>
       </div>
     </div>
   </div>

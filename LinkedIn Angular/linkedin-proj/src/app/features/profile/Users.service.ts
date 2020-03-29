@@ -1,4 +1,9 @@
 import { User } from "../../_model/user";
+
+import { Injectable } from "@angular/core";
+@Injectable({
+  providedIn: "root"
+})
 export class UserService {
   private users: User[] = [
     {
@@ -38,13 +43,6 @@ export class UserService {
           endDate: "sept 2020",
           description: "pala pla pla"
         }
-      ],
-      community: [
-        {
-          id: 1,
-          post: { id: 1, post: "HI I'M Using LinkedIn :d" },
-          comment: [{ id: 1, comments: "Welcome broo" }]
-        }
       ]
     },
     {
@@ -72,12 +70,32 @@ export class UserService {
           endDate: "sept 2020",
           description: "pala pla pla"
         }
-      ],
-      community: [
+      ]
+    },
+    {
+      id: 3,
+      name: "Salma Wagdy",
+      jopTitle: "Front-End Developer",
+      location: "New York",
+
+      connections: 600,
+      imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrlBG: "../../assets/images/Background_Photo.jpg",
+
+      exp: [
         {
           id: 1,
-          post: { id: 1, post: "I'm searching for a jop :d" },
-          comment: [{ id: 1, comments: "Gooodqs" }]
+          title: "Student",
+          location: "Al Asmaili'yah ,Egypt",
+          company: {
+            id: 1,
+            name: "ITI Information Techonology (ITI)",
+            compLogo: "../../assets/images/suez-canal.png"
+          },
+
+          startDate: "Oct 2019",
+          endDate: "sept 2020",
+          description: "pala pla pla"
         }
       ]
     }

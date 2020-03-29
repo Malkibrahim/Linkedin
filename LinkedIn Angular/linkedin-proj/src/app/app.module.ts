@@ -13,7 +13,8 @@ import { AddPostComponent } from "./features/post/add-post/add-post.component";
 import { AddCommentComponent } from "./features/post/add-comment/add-comment.component";
 import { ErrorPageComponent } from "./layout/error-page/error-page.component";
 import { UserService } from "./features/profile/Users.service";
-
+import { FormsModule } from "@angular/forms";
+import { CommunityService } from "./features/post/community.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +29,11 @@ import { UserService } from "./features/profile/Users.service";
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: "", redirectTo: "/home", pathMatch: "full" },
       { path: "home", component: CreatePostComponent },
+      { path: "home/:id", component: CreatePostComponent },
       { path: "profile", component: UserInfoComponent },
       { path: "**", component: ErrorPageComponent }
     ])
@@ -39,7 +42,7 @@ import { UserService } from "./features/profile/Users.service";
   //   SectionComponent
   // ],
   // imports: [BrowserModule],
-  providers: [UserService],
+  providers: [UserService, CommunityService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

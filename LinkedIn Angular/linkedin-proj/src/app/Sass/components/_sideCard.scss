@@ -25,16 +25,18 @@
     border: 1px solid $nav-background;
     border-radius: 50%;
     position: absolute;
-    background-image: url(../../../assets/picture.jpg);
-    background-size: cover;
+    //background-image: url(../../../assets/picture.jpg);
+    //background-size: cover;
     left: 38.3%;
     top: 9%;
-    padding: 1rem;
+    //padding: 1rem;
     //margin: 1rem;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+
+    &--image {
+      height: 76.8px;
+      width: 76.8px;
+      border-radius: 50%;
+    }
   }
 
   &--identify {

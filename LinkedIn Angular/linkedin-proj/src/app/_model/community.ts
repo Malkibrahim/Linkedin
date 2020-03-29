@@ -1,7 +1,6 @@
 import { Post } from "./posts";
-import { Comments } from "./comment";
+// import { User } from "./user";
 export interface Community {
   id?: number;
   post?: Post;
-  comment?: Comments[];
 }
