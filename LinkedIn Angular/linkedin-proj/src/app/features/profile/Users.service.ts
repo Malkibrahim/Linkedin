@@ -3,6 +3,7 @@ import { User } from "../../_model/user";
 import { Injectable } from "@angular/core";
 import { EventEmitter } from "@angular/core";
 import { Experience } from "./../../_model/experience";
+import { ExperienceService } from "./add-section/experince.service";
 @Injectable({
   providedIn: "root"
 })
@@ -40,6 +41,9 @@ export class UserService {
       imgUrlBG: "../../assets/images/Background_Photo.jpg"
     }
   ];
+
+  constructor(private experienceService: ExperienceService) {}
+
   //       productAdded = new EventEmitter<product>();
   searchItem = new EventEmitter<any>();
   getAll(): User[] {
@@ -54,9 +58,19 @@ export class UserService {
     return index;
     // this.users.find(a => a.name === name);
   }
-  // getIdByName(name: string) {
-  //   const user = this.users.find(a => a.name == name);
-  //   return user.id;
-  //   // this.users.find(a => a.name === name);
-  // }
+  getIdByName(name: string) {
+    const user = this.users.find(a => a.name == name);
+    return user.id;
+    // this.users.find(a => a.name === name);
+  }
+  getUserFullDataById(id) {
+    this.getById(id);
+    this.experienceService.getExperienceByUserId(id);
+    var fullData = {
+      user: this.getById(id),
+      userExp: this.experienceService.getExperienceByUserId(id)
+    };
+    console.log(fullData);
+    return fullData;
+  }
 }

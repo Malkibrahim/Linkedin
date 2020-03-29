@@ -1,5 +1,11 @@
 import { company } from "./../../../_model/Company";
 import { Experience } from "./../../../_model/experience";
+import { Injectable } from "@angular/core";
+import { UserService } from "src/app/features/profile/Users.service";
+
+@Injectable({
+  providedIn: "root"
+})
 export class ExperienceService {
   private expiriences: Experience[] = [
     {
@@ -65,6 +71,7 @@ export class ExperienceService {
       description: "pala pla pla"
     }
   ];
+
   AddExperience(obj) {
     const ide = this.getExperienceByUserId(obj.userId).length + 1;
     obj = {
@@ -107,4 +114,7 @@ export class ExperienceService {
     obj.endDate = exp.endDate;
     obj.description = exp.description;
   }
+  //   getUserById(id) {
+  //     return this.userService.getById(id);
+  //   }
 }

@@ -4,28 +4,28 @@
       <div class="profile--details--background">
         <img
           class="profile--details--background--img "
-          [attr.Src]="user[index].imgUrlBG"
+          [attr.Src]="userData.imgUrlBG"
         />
       </div>
       <div class="profile--details--photo">
         <img
           class="profile--details--photo--img "
-          [attr.Src]="user[index].imgUrl"
+          [attr.Src]="userData.imgUrl"
         />
       </div>
       <div class="profile--details--InfoContainer">
         <div class="profile--details--InfoContainer--info">
           <a class="profile--details--InfoContainer--info--name">
-            {{ user[index].name }}
+            {{ userData.name }}
           </a>
           <span class="profile--details--InfoContainer--info--jobTitle">{{
-            user[index].jopTitle
+            userData.jopTitle
           }}</span>
           <a class="profile--details--InfoContainer--info--location"
-            >{{ user[index].location }} .</a
+            >{{ userData.location }} .</a
           >
           <a class="profile--details--InfoContainer--info--connection"
-            >{{ user[index].connections }} .</a
+            >{{ userData.connections }} .</a
           >
           <a class="profile--details--InfoContainer--info--contact"
             >Contact info .</a
@@ -48,7 +48,7 @@
             </button>
           </div>
           <div
-            *ngFor="let exps of user[index].exp"
+            *ngFor="let exps of experData"
             class="profile--details--InfoContainer--moreBtns--edu"
           >
             <span class="profile--details--InfoContainer--moreBtns--edu--icon">
