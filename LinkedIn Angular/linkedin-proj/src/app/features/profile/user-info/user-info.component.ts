@@ -40,6 +40,7 @@ export class UserInfoComponent implements OnInit {
     this.userService.searchItem.subscribe(userF => {
       this.userData = userF.user;
       this.experData = userF.userExp;
+      console.log(this.userData);
       this.router.navigate(["profile", this.userData.id]);
     });
   }

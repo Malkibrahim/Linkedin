@@ -24,6 +24,10 @@ export class SectionComponent implements OnInit {
     this.userId = this.activatedRoute.snapshot.params.id;
     console.log(this.userId);
     this.exper = this.experienceService.getExperienceByUserId(this.userId);
+    console.log(this.exper);
+  }
+  ngOnChange() {
+    this.exper = this.experienceService.getExperienceByUserId(this.userId);
   }
   onEdit(expId) {
     // console.log();

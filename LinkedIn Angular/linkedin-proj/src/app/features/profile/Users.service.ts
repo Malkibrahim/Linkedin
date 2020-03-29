@@ -11,7 +11,7 @@ export class UserService {
   private users: User[] = [
     {
       id: 1,
-      name: "Malak Ibarhim",
+      name: "Malak Kamel",
       jopTitle: "Web Developer",
       location: "Egypt",
       connections: 500,
@@ -58,9 +58,13 @@ export class UserService {
     return index;
     // this.users.find(a => a.name === name);
   }
-  getIdByName(name: string) {
-    const user = this.users.find(a => a.name == name);
-    return user.id;
+  getIdByName(nameUser: string) {
+    console.log(name);
+    debugger;
+    const user = this.users.filter(a => a.name === nameUser);
+    var id = user[0].id;
+    console.log(id);
+    return id;
     // this.users.find(a => a.name === name);
   }
   getUserFullDataById(id) {

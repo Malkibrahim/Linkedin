@@ -42,8 +42,10 @@ export class NavigationComponent implements OnInit {
     var data = (this.searchBox.nativeElement as HTMLInputElement).value;
     console.log(data);
     //   this.userId = parseInt(this.activatedRoute.snapshot.params["id"]);
-    const id = this.userService.getIdByName(data);
-    const user = this.userService.getById(id);
+    var id = this.userService.getIdByName(data);
+
+    const user = this.userService.getUserFullDataById(id);
+    console.log(user);
     this.userService.searchItem.next(user);
   }
   onHome(user) {
