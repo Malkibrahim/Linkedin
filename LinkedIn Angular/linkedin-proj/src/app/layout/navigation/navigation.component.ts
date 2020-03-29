@@ -33,6 +33,14 @@ export class NavigationComponent implements OnInit {
     this.index = this.userService.getIndex(data);
     this.userService.searchItem.next(this.index);
   }
+  // getValue() {
+  //   var data = (this.searchBox.nativeElement as HTMLInputElement).value;
+  //   console.log(data);
+  //   //   this.userId = parseInt(this.activatedRoute.snapshot.params["id"]);
+  //   const id = this.userService.getIdByName(data);
+  //   const user = this.userService.getById(id);
+  //   this.userService.searchItem.next(user);
+  // }
   onHome(user) {
     this.router.navigate(["/home", user[0].id]);
   }

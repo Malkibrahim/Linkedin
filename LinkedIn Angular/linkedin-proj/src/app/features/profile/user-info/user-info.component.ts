@@ -23,5 +23,9 @@ export class UserInfoComponent implements OnInit {
       this.index = index;
       console.log(this.index);
     });
+    // this.userService.searchItem.subscribe(user => {
+    //   this.user = this.user;
+    //   console.log(this.user);
+    // });
   }
 }
