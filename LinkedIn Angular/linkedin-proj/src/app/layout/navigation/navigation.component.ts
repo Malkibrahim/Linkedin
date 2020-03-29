@@ -20,13 +20,20 @@ export class NavigationComponent implements OnInit {
   @Output()
   searchItem = new EventEmitter<any>();
   user: User[];
+  index: number;
   constructor(private router: Router, public userService: UserService) {}
 
   ngOnInit() {
     // console.log((this.searchBox.nativeElement as HTMLInputElement).value);
     this.user = this.userService.getAll();
   }
+  getValue() {
+    var data = (this.searchBox.nativeElement as HTMLInputElement).value;
+    console.log(data);
+    this.index = this.userService.getIndex(data);
+    this.userService.searchItem.next(this.index);
+  }
   onHome(user) {
-    this.router.navigate(["/home", user[0].id]);
+    this.router.navigate(["/home", user[this.index].id]);
   }
 }

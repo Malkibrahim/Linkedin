@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { NavigationComponent } from "./layout/navigation/navigation.component";
@@ -15,6 +16,7 @@ import { ErrorPageComponent } from "./layout/error-page/error-page.component";
 import { UserService } from "./features/profile/Users.service";
 import { FormsModule } from "@angular/forms";
 import { CommunityService } from "./features/post/community.service";
+import { CompanyService } from "./features/profile/add-section/company.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,11 +32,13 @@ import { CommunityService } from "./features/post/community.service";
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: "", redirectTo: "/home", pathMatch: "full" },
       { path: "home", component: CreatePostComponent },
       { path: "home/:id", component: CreatePostComponent },
       { path: "profile", component: UserInfoComponent },
+      { path: "form", component: AddSectionComponent },
       { path: "**", component: ErrorPageComponent }
     ])
   ],
@@ -42,7 +46,7 @@ import { CommunityService } from "./features/post/community.service";
   //   SectionComponent
   // ],
   // imports: [BrowserModule],
-  providers: [UserService, CommunityService],
+  providers: [UserService, CommunityService, CompanyService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

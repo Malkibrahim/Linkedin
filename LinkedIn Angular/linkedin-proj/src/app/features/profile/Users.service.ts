@@ -1,6 +1,8 @@
 import { User } from "../../_model/user";
 
 import { Injectable } from "@angular/core";
+import { EventEmitter } from "@angular/core";
+import { Experience } from "./../../_model/experience";
 @Injectable({
   providedIn: "root"
 })
@@ -48,6 +50,34 @@ export class UserService {
     {
       id: 2,
       name: "Mariam Magdy",
+      jopTitle: "Front-End Developer",
+      location: "New York",
+
+      connections: 600,
+
+      imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrlBG: "../../assets/images/Background_Photo.jpg",
+
+      exp: [
+        {
+          id: 1,
+          title: "Student",
+          location: "Al Asmaili'yah ,Egypt",
+          company: {
+            id: 1,
+            name: "ITI Information Techonology (ITI)",
+            compLogo: "../../assets/images/suez-canal.png"
+          },
+
+          startDate: "Oct 2019",
+          endDate: "sept 2020",
+          description: "pala pla pla"
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: "Salma Wagdy",
       jopTitle: "Front-End Developer",
       location: "New York",
 
@@ -101,7 +131,7 @@ export class UserService {
     }
   ];
   //       productAdded = new EventEmitter<product>();
-
+  searchItem = new EventEmitter<any>();
   getAll(): User[] {
     return this.users.slice();
   }
@@ -109,6 +139,24 @@ export class UserService {
   getById(id: number): User {
     return this.users.find(a => a.id === id);
   }
+  getIndex(name: string): number {
+    const index = this.users.findIndex(a => a.name == name);
+    return index;
+    // this.users.find(a => a.name === name);
+  }
+  AddExperience(obj, id) {
+    this.users[id].exp.push(obj);
+    console.log(this.users[id].exp);
+  }
+
+  // getPosts(num): any {
+  //   var element = this.getById(num);
+  //   var arr = element.connection; //[1,2,3]
+  //   for (let i; i < arr.length; i++) {
+  //     var post = this.getById(arr[i]).community[0].post.post;
+  //   }
+  //   return post;
+  // }
 
   //   Update (userr:User){
   //       const index = this.users.findIndex(a => a.id === user.id);
