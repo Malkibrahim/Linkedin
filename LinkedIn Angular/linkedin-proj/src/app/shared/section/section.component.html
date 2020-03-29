@@ -2,12 +2,12 @@
   <div class="section__title">
     <span>Experience</span>
     <button class="btn btn--light btn--circle ">
-      <a routerLink="/form">
+      <a (click)="onAdd()">
         <i class="fa fa-plus fa-2x" aria-hidden="true"></i
       ></a>
     </button>
   </div>
-  <div *ngFor="let exps of user[0].exp" class="section__container">
+  <div *ngFor="let exps of exper" class="section__container">
     <div class="section__container__info">
       <div class="post-info">
         <img
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <button class="btn btn--light btn--circle m-2x">
+    <button (click)="onEdit(exps.id)" class="btn btn--light btn--circle m-2x">
       <i class="fa fa-pencil" aria-hidden="true"></i>
     </button>
   </div>

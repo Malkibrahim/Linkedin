@@ -15,37 +15,37 @@ export class UserService {
       location: "Egypt",
       connections: 500,
       imgUrl: "../../assets/images/profile-photo.jpg",
-      imgUrlBG: "../../assets/images/Background_Photo.jpg",
-      exp: [
-        {
-          id: 1,
-          title: "Trainee",
-          location: "Al Asmaili'yah ,Egypt",
-          company: {
-            id: 1,
-            name: "ITI Information Techonology (ITI)",
-            compLogo: "../../assets/images/iti.png"
-          },
+      imgUrlBG: "../../assets/images/Background_Photo.jpg"
+      // exp: [
+      //   {
+      //     id: 1,
+      //     title: "Trainee",
+      //     location: "Al Asmaili'yah ,Egypt",
+      //     company: {
+      //       id: 1,
+      //       name: "ITI Information Techonology (ITI)",
+      //       compLogo: "../../assets/images/iti.png"
+      //     },
 
-          startDate: "Oct 2019",
-          endDate: "sept 2020",
-          description: "9-months trainee"
-        },
-        {
-          id: 2,
-          title: "Manager",
-          location: "Al Asmaili'yah ,Egypt",
-          company: {
-            id: 1,
-            name: " Vodafone",
-            compLogo: "../../assets/images/suez-canal.png"
-          },
+      //     startDate: "Oct 2019",
+      //     endDate: "sept 2020",
+      //     description: "9-months trainee"
+      //   },
+      //   {
+      //     id: 2,
+      //     title: "Manager",
+      //     location: "Al Asmaili'yah ,Egypt",
+      //     company: {
+      //       id: 1,
+      //       name: " Vodafone",
+      //       compLogo: "../../assets/images/suez-canal.png"
+      //     },
 
-          startDate: "Oct 2019",
-          endDate: "sept 2020",
-          description: "pala pla pla"
-        }
-      ]
+      //     startDate: "Oct 2019",
+      //     endDate: "sept 2020",
+      //     description: "pala pla pla"
+      //   }
+      // ]
     },
     {
       id: 2,
@@ -56,25 +56,25 @@ export class UserService {
       connections: 600,
 
       imgUrl: "../../assets/images/profile-photo.jpg",
-      imgUrlBG: "../../assets/images/Background_Photo.jpg",
+      imgUrlBG: "../../assets/images/Background_Photo.jpg"
+      // exp: [
+      //   {
+      //     id: 1,
+      //     title: "Student",
+      //     location: "Al Asmaili'yah ,Egypt",
+      //     company: {
+      //       id: 1,
+      //       name: "ITI Information Techonology (ITI)",
+      //       compLogo: "../../assets/images/suez-canal.png"
+      //     },
 
-      exp: [
-        {
-          id: 1,
-          title: "Student",
-          location: "Al Asmaili'yah ,Egypt",
-          company: {
-            id: 1,
-            name: "ITI Information Techonology (ITI)",
-            compLogo: "../../assets/images/suez-canal.png"
-          },
-
-          startDate: "Oct 2019",
-          endDate: "sept 2020",
-          description: "pala pla pla"
-        }
-      ]
+      //     startDate: "Oct 2019",
+      //     endDate: "sept 2020",
+      //     description: "pala pla pla"
+      //   }
+      // ]
     },
+
     {
       id: 3,
       name: "Salma Wagdy",
@@ -83,51 +83,24 @@ export class UserService {
 
       connections: 600,
       imgUrl: "../../assets/images/profile-photo.jpg",
-      imgUrlBG: "../../assets/images/Background_Photo.jpg",
+      imgUrlBG: "../../assets/images/Background_Photo.jpg"
 
-      exp: [
-        {
-          id: 1,
-          title: "Student",
-          location: "Al Asmaili'yah ,Egypt",
-          company: {
-            id: 1,
-            name: "ITI Information Techonology (ITI)",
-            compLogo: "../../assets/images/suez-canal.png"
-          },
+      // exp: [
+      //   {
+      //     id: 1,
+      //     title: "Student",
+      //     location: "Al Asmaili'yah ,Egypt",
+      //     company: {
+      //       id: 1,
+      //       name: "ITI Information Techonology (ITI)",
+      //       compLogo: "../../assets/images/suez-canal.png"
+      //     },
 
-          startDate: "Oct 2019",
-          endDate: "sept 2020",
-          description: "pala pla pla"
-        }
-      ]
-    },
-    {
-      id: 3,
-      name: "Salma Wagdy",
-      jopTitle: "Front-End Developer",
-      location: "New York",
-
-      connections: 600,
-      imgUrl: "../../assets/images/profile-photo.jpg",
-      imgUrlBG: "../../assets/images/Background_Photo.jpg",
-
-      exp: [
-        {
-          id: 1,
-          title: "Student",
-          location: "Al Asmaili'yah ,Egypt",
-          company: {
-            id: 1,
-            name: "ITI Information Techonology (ITI)",
-            compLogo: "../../assets/images/suez-canal.png"
-          },
-
-          startDate: "Oct 2019",
-          endDate: "sept 2020",
-          description: "pala pla pla"
-        }
-      ]
+      //     startDate: "Oct 2019",
+      //     endDate: "sept 2020",
+      //     description: "pala pla pla"
+      //   }
+      // ]
     }
   ];
   //       productAdded = new EventEmitter<product>();
@@ -144,11 +117,13 @@ export class UserService {
     return index;
     // this.users.find(a => a.name === name);
   }
-  AddExperience(obj, id) {
-    this.users[id].exp.push(obj);
-    console.log(this.users[id].exp);
-  }
-
+  // AddExperience(obj, id) {
+  //   this.users[id].exp.push(obj);
+  //   console.log(this.users[id].exp);
+  // }
+  // getExperinceById(id) {
+  //   const exp = this.users[0];
+  // }
   // getPosts(num): any {
   //   var element = this.getById(num);
   //   var arr = element.connection; //[1,2,3]
