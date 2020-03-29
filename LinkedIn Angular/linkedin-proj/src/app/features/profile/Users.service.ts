@@ -62,7 +62,7 @@ export class UserService {
   getIdByName(nameUser: string) {
     console.log(name);
     debugger;
-    const user = this.users.filter(a => a.name === nameUser);
+    const user = this.users.filter(a => a.name == nameUser.toLowerCase());
     var id = user[0].id;
     console.log(id);
     return id;
