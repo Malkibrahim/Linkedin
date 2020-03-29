@@ -10,6 +10,8 @@ import { company } from "./../../../_model/Company";
 import { CompanyService } from "./company.service";
 import { Experience } from "./../../../_model/experience";
 import { UserService } from "./../Users.service";
+import { Router, ActivatedRoute } from "@angular/router";
+import { ExperienceService } from "./experince.service";
 
 @Component({
   selector: "app-add-section",
@@ -27,13 +29,32 @@ export class AddSectionComponent implements OnInit {
   startDate: FormControl;
   endDate: FormControl;
   description: FormControl;
+  userId: number;
+  expId: number;
 
   constructor(
     public companyService: CompanyService,
-    public userervice: UserService
+    public userervice: UserService,
+    public router: Router,
+    private activatedRoute: ActivatedRoute,
+    private experienceService: ExperienceService
   ) {}
 
   ngOnInit() {
+    this.userId = parseInt(this.activatedRoute.snapshot.params["id"]);
+    this.expId = this.activatedRoute.snapshot.params["idS"];
+    console.log(this.userId);
+    console.log(this.expId);
+    console.log(this.userId);
+    if (this.expId) {
+      // var user=this.experienceService.getExperienceByUserId()
+      var experience = this.experienceService.getSpecExperience(
+        this.userId,
+        this.expId
+      );
+      console.log(experience);
+    }
+    console.log(experience);
     this.companies = this.companyService.getAll();
     console.log(this.companies);
     this.title = new FormControl();
@@ -51,12 +72,23 @@ export class AddSectionComponent implements OnInit {
       endDt: this.endDate,
       descriptionText: this.description
     });
+    if (experience != null) {
+      //    const logo=this.companyService.getLogo(experience.company.name)
+      this.myForm.patchValue({
+        titleName: experience.title,
+        locationName: experience.location,
+        companyName: experience.company.name,
+        startDT: experience.startDate,
+        endDt: experience.endDate,
+        descriptionText: experience.description
+      });
+    }
   }
   onSubmit() {
     console.log(this.myForm);
     //const exp: Experience = this.myForm.getRawValue();
     var experince: Experience = {
-      id: 0,
+      userId: this.userId,
       title: this.myForm.value.titleName,
       location: this.myForm.value.locationName,
       company: {
@@ -70,6 +102,11 @@ export class AddSectionComponent implements OnInit {
       description: this.myForm.value.descriptionText
     };
     console.log(experince);
-    this.userervice.AddExperience(experince, 0);
+    if (this.expId) {
+      this.experienceService.updateExperience(experince, this.expId);
+    } else {
+      this.experienceService.AddExperience(experince);
+    }
+    this.router.navigate(["/profile", this.userId]);
   }
 }

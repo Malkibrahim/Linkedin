@@ -9,6 +9,7 @@ import { EventEmitter } from "@angular/core";
 import { UserService } from "src/app/features/profile/Users.service";
 import { User } from "src/app/_model/user";
 import { Router } from "@angular/router";
+import { ExperienceService } from "./../../features/profile/add-section/experince.service";
 @Component({
   selector: "app-navigation",
   templateUrl: "./navigation.component.html",
@@ -20,18 +21,32 @@ export class NavigationComponent implements OnInit {
   @Output()
   searchItem = new EventEmitter<any>();
   user: User[];
-  index: number;
-  constructor(private router: Router, public userService: UserService) {}
+  userData: any;
+  constructor(
+    private userExperience: ExperienceService,
+    private router: Router,
+    public userService: UserService
+  ) {}
 
   ngOnInit() {
     // console.log((this.searchBox.nativeElement as HTMLInputElement).value);
     this.user = this.userService.getAll();
   }
+  // getValue() {
+  //   var data = (this.searchBox.nativeElement as HTMLInputElement).value;
+  //   console.log(data);
+  //   this.index = this.userService.getIndex(data);
+  //   this.userService.searchItem.next(this.index);
+  // }
   getValue() {
     var data = (this.searchBox.nativeElement as HTMLInputElement).value;
     console.log(data);
-    this.index = this.userService.getIndex(data);
-    this.userService.searchItem.next(this.index);
+    //   this.userId = parseInt(this.activatedRoute.snapshot.params["id"]);
+    var id = this.userService.getIdByName(data);
+
+    const user = this.userService.getUserFullDataById(id);
+    console.log(user);
+    this.userService.searchItem.next(user);
   }
   onHome(user) {
     this.router.navigate(["/home", user[0].id]);

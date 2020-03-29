@@ -17,6 +17,7 @@ import { UserService } from "./features/profile/Users.service";
 import { FormsModule } from "@angular/forms";
 import { CommunityService } from "./features/post/community.service";
 import { CompanyService } from "./features/profile/add-section/company.service";
+import { ExperienceService } from "./features/profile/add-section/experince.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,11 +38,16 @@ import { CompanyService } from "./features/profile/add-section/company.service";
       { path: "", redirectTo: "/home/1", pathMatch: "full" },
       // { path: "home", component: CreatePostComponent },
       { path: "home/:id", component: CreatePostComponent },
+      { path: "profile/edit/:id/:idS", component: AddSectionComponent },
+
       { path: "profile/:id", component: UserInfoComponent },
       { path: "profile", component: UserInfoComponent },
       { path: "add-post", component: AddPostComponent },
       { path: "add-post/:id", component: AddPostComponent },
       { path: "form", component: AddSectionComponent },
+      // { path: "form", component: AddSectionComponent },
+      { path: "profile/add/:id", component: AddSectionComponent },
+
       { path: "**", component: ErrorPageComponent }
     ])
   ],
@@ -49,7 +55,7 @@ import { CompanyService } from "./features/profile/add-section/company.service";
   //   SectionComponent
   // ],
   // imports: [BrowserModule],
-  providers: [UserService, CommunityService, CompanyService],
+  providers: [UserService, CommunityService, CompanyService, ExperienceService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -8,6 +8,4 @@ export interface User {
   location?: string;
   imgUrl?: string;
   imgUrlBG?: string;
-  exp?: Experience[];
-  // community?: Community[];
 }
