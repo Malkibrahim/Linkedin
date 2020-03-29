@@ -15,7 +15,13 @@ export class CommunityService {
         userId: 1,
         img:
           "https://media-exp1.licdn.com/dms/image/sync/C4E18AQH9BZAHZOw1Hg/companyUpdate-article-image-shrink_627_1200/0?e=1586995200&v=beta&t=eN67_JhHsEnqLE00PZzKmYP8qxO4nGtaRrSXbOTbS7M",
-        comments: [{ id: 1, comment: "Welcome broo", userId: 1 }]
+        comments: [
+          {
+            id: 1,
+            comment: "You are the best dear,,,,, so proud of You 👏👏 (edited)",
+            userId: 3
+          }
+        ]
       }
     },
     {
@@ -37,7 +43,20 @@ export class CommunityService {
         userId: 2,
         img:
           "https://www.socialchamp.io/blog/wp-content/uploads/2019/09/schedule-posts-on-linkedin-1.jpg",
-        comments: [{ id: 2, comment: "Welcome broo", userId: 1 }],
+        comments: [
+          {
+            id: 2,
+            comment:
+              "Looking for people to book travel from home 🛩️🚗🏢🛳️🏡 being a travel agent has some great perks!💯 Free cruises and hotel stays. We will train you! Inbox me 📨or message me here👇",
+            userId: 1
+          },
+          {
+            id: 2,
+            comment:
+              "Looking for people to book travel from home 🛩️🚗🏢🛳️🏡 being a travel agent has some great perks!💯 Free cruises and hotel stays. We will train you! Inbox me 📨or message me here👇",
+            userId: 2
+          }
+        ],
         like: 10
       }
     }

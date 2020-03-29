@@ -59,7 +59,12 @@
         <div class="nav--menu--items--icon">
           <i class="fa fa-user fa-2x "></i>
         </div>
-        <a routerLink="/profile" class="nav--menu--items--link">Me</a>
+        <a
+          routerLink="/profile"
+          (click)="onProfile(user)"
+          class="nav--menu--items--link"
+          >Me</a
+        >
       </li>
     </ul>
     <!-- Navigation -->

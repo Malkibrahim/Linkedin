@@ -34,6 +34,9 @@ export class NavigationComponent implements OnInit {
     this.userService.searchItem.next(this.index);
   }
   onHome(user) {
-    this.router.navigate(["/home", user[this.index].id]);
+    this.router.navigate(["/home", user[0].id]);
+  }
+  onProfile(user) {
+    this.router.navigate(["/profile", user[0].id]);
   }
 }

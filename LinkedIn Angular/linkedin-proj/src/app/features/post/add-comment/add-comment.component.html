@@ -5,11 +5,13 @@
   <div class="comment-box__form-container">
     <form #userform="ngForm">
       <input
+        #comment
         ngModel
         name="comment"
         type="text"
         placeholder="Add a comment..."
         size="112"
+        (keydown.enter)="onAdd(comment)"
       />
     </form>
   </div>
@@ -22,7 +24,7 @@
     <div class="comments-list__header__top ">
       <div class="post-info__content ">
         <span class="link">{{ getUserName(m.userId) }}</span>
-        <span>{{ m.jopTitle }}</span>
+        <span>{{ user.jopTitle }}</span>
       </div>
 
       <div class="comments-list__header__top__right">
@@ -34,8 +36,8 @@
     </div>
 
     <div class="comments-list__header__bottom  ">
-      <!-- <p>You are the best dear,,,,, so proud of You 👏👏 (edited)</p> -->
-      <!-- <p>{{ com.value }}</p> -->
+      <!-- <p></p> -->
+      <p>{{ m.comment }}</p>
     </div>
   </div>
 </div>

@@ -37,6 +37,7 @@ import { CompanyService } from "./features/profile/add-section/company.service";
       { path: "", redirectTo: "/home", pathMatch: "full" },
       { path: "home", component: CreatePostComponent },
       { path: "home/:id", component: CreatePostComponent },
+      { path: "profile/:id", component: UserInfoComponent },
       { path: "profile", component: UserInfoComponent },
       { path: "form", component: AddSectionComponent },
       { path: "**", component: ErrorPageComponent }

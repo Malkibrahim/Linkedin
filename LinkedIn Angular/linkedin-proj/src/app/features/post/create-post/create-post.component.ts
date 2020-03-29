@@ -28,9 +28,10 @@ export class CreatePostComponent implements OnInit {
   ) {}
   ngOnInit() {
     this.community = this.communityService.getAll();
-    console.log(this.community);
+    // console.log(this.community);
     let id = parseInt(this.route.snapshot.paramMap.get("id"));
     this.userId = id;
+    // console.log(id);
   }
   // ngAfterViewInit() {
   //   console.log(this.post.nativeElement);
