@@ -16,8 +16,6 @@ import { UserService } from "./../../features/profile/Users.service";
 export class NavigationComponent implements OnInit {
   @ViewChild("search", { static: false })
   searchBox: ElementRef;
-  @Output()
-  searchItem = new EventEmitter<any>();
 
   constructor(public userService: UserService) {}
 
@@ -25,6 +23,7 @@ export class NavigationComponent implements OnInit {
   getValue() {
     var data = (this.searchBox.nativeElement as HTMLInputElement).value;
     console.log(data);
-    this.userService.getIndex(data);
+    var index = this.userService.getIndex(data);
+    this.userService.searchItem.next(index);
   }
 }

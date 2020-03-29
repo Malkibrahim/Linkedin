@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 body {
   font-size: 62.5%;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif; }
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif; }
 
 .container {
   width: 50%;
@@ -28,6 +28,12 @@ body {
 .p-xlg {
   padding: 1.7rem; }
 
+.p-xxlg {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 600;
+  padding: 0.2rem 1.5rem; }
+
 .p-md {
   padding: 1.2rem 0.5rem; }
 
@@ -40,10 +46,19 @@ body {
 .p-lr {
   padding: 0 1rem; }
 
+.p-xxxlg {
+  padding: 2.8rem; }
+
+.f-r {
+  float: right; }
+
+.m-t {
+  margin-top: 0.8rem; }
+
 * {
   margin: 0;
   padding: 0;
-  font-size: medium; }
+  font-size: 0.8rem; }
 
 .btn {
   text-decoration: none;
@@ -101,7 +116,13 @@ body {
     -ms-border-radius: 50%;
     -o-border-radius: 50%; }
     .btn--circle .fa-pencil {
-      font-size: x-large; }
+      font-size: large; }
+    .btn--circle--light {
+      color: #fff; }
+      .btn--circle--light .fa-times {
+        font-size: large; }
+      .btn--circle--light:hover {
+        background-color: #0000001c; }
   .btn--light-secondary {
     font-size: 1.4rem;
     color: #707070;
@@ -174,79 +195,79 @@ body {
     text-align: center; }
 
 .profile {
-  margin: 5rem 8rem;
-  padding-bottom: 3rem;
-  border: 3px #dbdbdb solid; }
-  .profile--background {
-    border-bottom: 1.5px #dbdbdb solid;
-    height: 14rem;
-    position: relative; }
-    .profile--background--img {
-      background-size: cover;
-      width: 100%;
-      height: 14rem; }
-  .profile--photo {
-    margin-left: 5rem;
-    border: 1px black solid;
-    border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
-    border: 3px solid #dbdbdb;
-    position: absolute;
-    top: 18rem; }
-    .profile--photo--img {
+  margin: 5rem 0rem; }
+  .profile--details {
+    border: 3px #dbdbdb solid; }
+    .profile--details--background {
+      border-bottom: 1.5px #dbdbdb solid;
+      height: 14rem;
+      position: relative; }
+      .profile--details--background--img {
+        background-size: cover;
+        width: 100%;
+        height: 14rem; }
+    .profile--details--photo {
+      margin-left: 5rem;
+      border: 1px black solid;
       border-radius: 50%;
-      width: 100%;
-      height: 100%; }
-  .profile--InfoContainer {
-    display: flex;
-    justify-content: space-between; }
-    .profile--InfoContainer--info--name {
-      font-size: 2rem;
-      display: inline-block;
-      margin-top: 7rem;
-      margin-left: 3rem; }
-    .profile--InfoContainer--info--jobTitle {
-      font-size: 1.5rem;
-      font-weight: lighter;
-      display: block;
-      margin-top: 0.5rem;
-      margin-left: 3rem; }
-    .profile--InfoContainer--info--location {
-      font-size: 1.5rem;
-      font-weight: lighter;
-      display: inline-block;
-      margin-top: 0.5rem;
-      margin-left: 3rem; }
-    .profile--InfoContainer--info--connection, .profile--InfoContainer--info--contact {
-      display: inline-block;
-      margin-top: 0.5rem;
-      margin-left: 0.5rem;
-      font-weight: lighter;
-      font-size: 1.5rem;
-      color: #006097; }
-    .profile--InfoContainer--info a:hover {
-      text-decoration: underline;
-      cursor: pointer; }
-    .profile--InfoContainer--moreBtns {
-      margin-top: 10px; }
-      .profile--InfoContainer--moreBtns--edu {
-        margin-bottom: 26px;
-        margin-top: 28px;
-        display: block; }
-        .profile--InfoContainer--moreBtns--edu--icon img {
-          width: 10%;
-          height: 10%; }
-        .profile--InfoContainer--moreBtns--edu--link {
-          font-weight: 100;
-          text-align: center;
-          font-size: 1.5rem; }
-          .profile--InfoContainer--moreBtns--edu--link:hover {
-            text-decoration: underline;
-            color: #006097;
-            cursor: pointer; }
-      .profile--InfoContainer--moreBtns--crud {
-        margin-left: 5rem; }
+      width: 10rem;
+      height: 10rem;
+      border: 3px solid #dbdbdb;
+      position: absolute;
+      top: 18rem; }
+      .profile--details--photo--img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%; }
+    .profile--details--InfoContainer {
+      display: flex;
+      justify-content: space-between; }
+      .profile--details--InfoContainer--info--name {
+        font-size: 1.5rem;
+        display: inline-block;
+        margin-top: 7rem;
+        margin-left: 3rem; }
+      .profile--details--InfoContainer--info--jobTitle {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        display: block;
+        margin-top: 0.5rem;
+        margin-left: 3rem; }
+      .profile--details--InfoContainer--info--location {
+        font-size: 1rem;
+        font-weight: lighter;
+        display: inline-block;
+        margin-top: 0.5rem;
+        margin-left: 3rem; }
+      .profile--details--InfoContainer--info--connection, .profile--details--InfoContainer--info--contact {
+        display: inline-block;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+        font-weight: lighter;
+        font-size: 1rem;
+        color: #006097; }
+      .profile--details--InfoContainer--info a:hover {
+        text-decoration: underline;
+        cursor: pointer; }
+      .profile--details--InfoContainer--moreBtns {
+        margin-top: 10px; }
+        .profile--details--InfoContainer--moreBtns--edu {
+          margin-bottom: 26px;
+          margin-top: 28px;
+          display: block; }
+          .profile--details--InfoContainer--moreBtns--edu--icon img {
+            width: 10%;
+            height: 10%; }
+          .profile--details--InfoContainer--moreBtns--edu--link {
+            font-weight: 100;
+            text-align: center;
+            font-size: 1rem; }
+            .profile--details--InfoContainer--moreBtns--edu--link:hover {
+              text-decoration: underline;
+              color: #006097;
+              cursor: pointer; }
+        .profile--details--InfoContainer--moreBtns--crud {
+          margin-left: 1rem; }
 
 .post {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
@@ -354,25 +375,18 @@ body {
       padding: 2px 1.5rem 20px; }
 
 .section {
-  border-bottom: 1rem #dbdbdb;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
+  margin-top: 20px;
+  border: 3px #dbdbdb solid; }
   .section__title {
     margin: 1rem 2rem;
-    font-size: larger; }
-  .section__Btns {
-    margin: 3rem;
-    display: block; }
-  .section__container__img {
-    margin: 0;
-    border-radius: 50%; }
-  .section__container__info {
-    margin-left: 8rem; }
-    .section__container__info__title {
-      font-weight: bold;
-      font-size: large;
-      margin-bottom: 1rem; }
+    display: flex;
+    justify-content: space-between; }
+    .section__title span {
+      font-size: 1.5rem; }
+  .section__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem; }
 
 .create-post {
   border: 0;
@@ -400,10 +414,56 @@ body {
     .create-post__footer__content {
       color: #707070; }
 
+.add-post {
+  min-height: 430px;
+  margin-bottom: 8px;
+  border: 1px transparent; }
+  .add-post__header {
+    display: flex;
+    padding: 1rem 0rem;
+    justify-content: space-between;
+    background-color: #0073b1;
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    color: #fff;
+    flex-shrink: 0; }
+    .add-post__header h2 {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 3rem;
+      padding-left: 30px; }
+  .add-post__body {
+    line-height: 1.42;
+    height: 100%;
+    outline: 0;
+    overflow-y: auto;
+    padding: 12px 15px;
+    tab-size: 4;
+    -moz-tab-size: 4;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word; }
+    .add-post__body input[type="text"] {
+      border: none;
+      outline: none;
+      font-size: 1.4rem; }
+  .add-post__footer {
+    margin: 4rem; }
+  .add-post .fa-user-circle-o {
+    font-size: -webkit-xxx-large;
+    color: grey; }
+  .add-post .post-info span {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 600; }
+
 .WholeForm {
   margin: 5rem; }
   .WholeForm button {
-    background-color: #283e4a;
+    background-color: #0073b1;
+    color: #ffffff;
     border-radius: 1rem;
     padding: 1rem;
     width: 5rem;
@@ -430,30 +490,29 @@ body {
   color: #f4eeff;
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
   .nav--logo {
     padding-left: 2rem;
     width: 3%; }
     .nav--logo--icon {
       width: 100%; }
-  .nav--search {
-    margin-left: 7px; }
-    .nav--search--icon {
-      padding: 1rem;
-      color: #f4eeff; }
-    .nav--search--box {
-      display: inline-block;
-      height: 2rem;
-      padding: 0.2rem;
-      background-color: #f4eeff;
-      border-radius: 0.4rem; }
+  .nav--search--icon {
+    padding: 1rem;
+    color: #f4eeff; }
+  .nav--search--box {
+    display: inline-block;
+    height: 2rem;
+    padding: 0.2rem;
+    background-color: #f4eeff;
+    border-radius: 0.4rem; }
   .nav--menu {
     display: inline-block;
     padding-left: 15rem;
     list-style: none; }
     .nav--menu--items {
       display: inline-block;
-      padding-left: 3rem;
+      padding: 1rem;
       font-size: 1rem;
       cursor: pointer;
       transition: color 0.2s;

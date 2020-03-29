@@ -1,76 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style/style.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="https://use.fontawesome.com/3ee71ef1c8.js"></script>
-  </head>
-  <body>
-    <div class="header">
-      <!-- Navigation -->
-      <div class="nav">
-        <div class="nav--logo">
-          <img class="nav--logo--icon" src="Assets/Logo.png" />
+<div class="home">
+  <!-- side card -->
+  <div class="left">
+    <div class="side-card">
+      <div class="side-card--header">
+        <img
+          class="side-card--header--image"
+          src="../../../../assets/header.jpg"
+        />
+      </div>
+      <div class="side-card--profile"></div>
+      <div class="side-card--identify">
+        <h3 class="side-card--identify--name">Max Hans</h3>
+        <p class="side-card--identify--title">Web Developer</p>
+      </div>
+      <div class="side-card--card-info">
+        <div class="side-card--card-info--line">
+          <p class="side-card--card-info--line--text">
+            Who viewed your profile
+          </p>
+          <span class="side-card--card-info--line--num">114</span>
         </div>
-        <div class="nav--search">
-          <span class="nav--search--icon"
-            ><i class="fa fa-search fa-2x"></i>
-          </span>
-          <input class="nav--search--box" size="40"placeholder="Search.." />
+        <div class="side-card--card-info--line">
+          <p class="side-card--card-info--line--text">Views of your post</p>
+          <span class="side-card--card-info--line--num">35</span>
         </div>
-        <ul class="nav--menu">
-          <li class="nav--menu--items">
-            <div class="nav--menu--items--icon">
-              <i class="fa fa-home fa-2x"></i>
-            </div>
-            <a class="nav--menu--items--link"> Home</a>
-          </li>
-          <li class="nav--menu--items">
-            <div class="nav--menu--items--icon">
-              <i class="fa fa-users fa-2x"></i>
-            </div>
-            <a class="nav--menu--items--link">My Network</a>
-          </li>
-          <li class="nav--menu--items">
-            <div class="nav--menu--items--icon">
-              <i class="fa fa-briefcase fa-2x"></i>
-            </div>
-
-            <a class="nav--menu--items--link">Jobs</a>
-          </li>
-          <li class="nav--menu--items">
-            <div class="nav--menu--items--icon">
-              <i class="fa fa-comments fa-2x"></i>
-            </div>
-
-            <a class="nav--menu--items--link">Messagings</a>
-          </li>
-          <li class="nav--menu--items">
-            <div class="nav--menu--items--icon">
-              <i class="fa fa-bell fa-2x"></i>
-            </div>
-
-            <a class="nav--menu--items--link">Notification</a>
-          </li>
-          <li class="nav--menu--items">
-            <div class="nav--menu--items--icon">
-              <i class="fa fa-user fa-2x aria-hidden="true"></i>
-            </div>
-            <a class="nav--menu--items--link">Me</a>
-          </li>
-        </ul>
-        <!-- Navigation -->
+      </div>
+      <div class="side-card--saved-items">
+        <i class="far fa-bookmark"></i>
+        Saved items
       </div>
     </div>
-    <!--create post-->
-    <div class="create-post ">
+    <!-- side card -->
+    <!-- side card -->
+    <div class="side-card">
+      <div class="side-card--card-info">
+        <div class="side-card--card-info--bar">
+          <p class="side-card--card-info--line--text">
+            Events
+          </p>
+          <span class="side-card--card-info--line--num"
+            ><i class="fas fa-plus"></i
+          ></span>
+        </div>
+        <div class="side-card--saved-items">
+          Descover More
+        </div>
+      </div>
+      <!-- side card -->
+    </div>
+    <!-- profile -->
+
+    <!--buttons-->
+
+    <!--buttons-->
+  </div>
+  <div class="middle">
+    <div class="create-post">
       <div class="create-post__header">
         <a href="#" class="btn--outline-primary bold p-lg"
           ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Start a
@@ -99,7 +84,7 @@
     </div>
     <!--create post-->
     <!--post-->
-    <div class="post  m-b">
+    <div class="post m-b">
       <div class="post__header">
         <div class="post-info">
           <img
@@ -157,37 +142,8 @@
             <i class="fa fa-share" aria-hidden="true"></i>Share
           </button>
         </div>
-        <div class="comment-box">
-          <div class="comment-box__avatar-image">
-            <i class="fa fa-user" aria-hidden="true"></i>
-          <div class="comment-box">
-            <div class="comment-box__avatar-image">
-              <i class="fa fa-user" aria-hidden="true"></i>
-            </div>
-            <div class="comment-box__form-container">
-              <form>
-                <input
-                  autofocus
-                  type="text"
-                  placeholder="Add a comment..."
-                  size="65"
-                />
-              </form>
-            </div>
-
-</div>
-          <div class="comment-box__form-container">
-            <form>
-              <input
-                autofocus
-                type="text"
-                placeholder="Add a comment..."
-                size="77"
-              />
-            </form>
-          </div>
-        </div>
-
+        <!--add-comment-->
+        <app-add-comment></app-add-comment>
         <div class="comments-list">
           <div class="comment-box__avatar-image">
             <i class="fa fa-user" aria-hidden="true"></i>
@@ -223,7 +179,7 @@
         </div>
       </div>
     </div>
-    </div>
-    <!--post-->
-  </body>
-</html>
+  </div>
+</div>
+
+<!--post-->

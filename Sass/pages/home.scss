@@ -31,3 +31,57 @@
     }
   }
 }
+.add-post {
+  min-height: 430px;
+  margin-bottom: 8px;
+  border: 1px transparent;
+  &__header {
+    display: flex;
+    padding: 1rem 0rem;
+    justify-content: space-between;
+    background-color: #0073b1;
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    color: #fff;
+    flex-shrink: 0;
+    h2 {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 3rem;
+      padding-left: 30px;
+    }
+  }
+  &__body {
+    line-height: 1.42;
+    height: 100%;
+    outline: 0;
+    overflow-y: auto;
+    padding: 12px 15px;
+    tab-size: 4;
+    -moz-tab-size: 4;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    input[type="text"] {
+      border: none;
+      outline: none;
+      font-size: 1.4rem;
+    }
+  }
+  &__footer {
+    margin: 4rem;
+  }
+  .fa-user-circle-o {
+    font-size: -webkit-xxx-large;
+    color: grey;
+  }
+  .post-info {
+    span {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+  }
+}

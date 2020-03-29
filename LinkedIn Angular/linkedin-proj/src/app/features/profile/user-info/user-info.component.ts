@@ -11,7 +11,7 @@ export class UserInfoComponent implements OnInit {
   @Input()
   user: User[];
   userData: UserService;
-
+  index: number = 0;
   constructor(public userService: UserService) {}
 
   ngOnInit() {
@@ -19,5 +19,9 @@ export class UserInfoComponent implements OnInit {
       this.user = this.userService.getAll();
     }
     console.log(this.user);
+    this.userService.searchItem.subscribe(index => {
+      this.index = index;
+      console.log(this.index);
+    });
   }
 }

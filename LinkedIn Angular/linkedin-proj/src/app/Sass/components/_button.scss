@@ -74,6 +74,15 @@
     .fa-pencil {
       font-size: large;
     }
+    &--light {
+      color: #fff;
+      .fa-times {
+        font-size: large;
+      }
+      &:hover {
+        background-color: #0000001c;
+      }
+    }
   }
   &--light-secondary {
     font-size: 1.4rem;

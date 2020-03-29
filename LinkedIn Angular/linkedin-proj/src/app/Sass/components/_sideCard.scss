@@ -1,6 +1,6 @@
 .side-card {
   width: $card-width;
-  height: 100%;
+  // height: 40%;
   border: 1px solid $nav-background;
   box-shadow: 0.25rem 0.25rem lighten($color: $nav-background, $amount: 70%);
   margin: 0.5rem;
@@ -27,19 +27,24 @@
     position: absolute;
     background-image: url(../../../assets/picture.jpg);
     background-size: cover;
-    left: 47.3%;
-    top: 10%;
+    left: 38.3%;
+    top: 9%;
     padding: 1rem;
-    // margin: 1rem;
+    //margin: 1rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
   }
 
   &--identify {
     border-bottom: 1px solid $nav-background;
     // width: 100%;
-    height: 4.5rem;
+    height: 10.5rem;
     padding-top: 5%;
     text-align: center;
     &--name {
+      margin-top: 34px;
       font-size: $font-size-medium;
     }
     &--title {
@@ -55,6 +60,9 @@
     // height: 6rem;
     padding: 1rem;
 
+    &--bar {
+      height: 5rem;
+    }
     &--line {
       height: 3rem;
       margin: 1rem;
@@ -82,5 +90,6 @@
   }
   &--saved-items {
     text-align: center;
+    margin: 1rem;
   }
 }

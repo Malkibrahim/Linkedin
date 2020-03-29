@@ -72,7 +72,16 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     .fa-pencil {
-      font-size: x-large;
+      font-size: large;
+    }
+    &--light {
+      color: #fff;
+      .fa-times {
+        font-size: large;
+      }
+      &:hover {
+        background-color: #0000001c;
+      }
     }
   }
   &--light-secondary {
