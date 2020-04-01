@@ -59,19 +59,18 @@
         <a
           routerLink="/add-post"
           (click)="onCreatePost(user)"
-          class="btn--outline-primary bold p-lg"
-          ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Start a
-          post</a
+          class="btn--outline-primary f-xl bold p-lg"
+          ><i class="far fa-edit f-xl"></i>Start a post</a
         >
         <div class="icons">
           <button class="btn btn--light-secondary p-xlg b-left ">
-            <i class="fa fa-camera" aria-hidden="true"></i>
+            <i class="fa fa-camera f-l" aria-hidden="true"></i>
           </button>
           <button class="btn btn--light-secondary p-xlg b-left">
-            <i class="fa fa-video-camera" aria-hidden="true"></i>
+            <i class="fas fa-video f-l"></i>
           </button>
           <button class="btn btn--light-secondary p-xlg b-left">
-            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+            <i class="fas fa-file f-l"></i>
           </button>
         </div>
       </div>
@@ -93,11 +92,12 @@
       id="{{ com }}"
     >
       <div class="post__header">
-        <div class="post-info">
+        <div class="post-info ">
           <img
             src="https://media-exp1.licdn.com/dms/image/C560BAQHYyjZVOa4b1A/company-logo_100_100/0?e=1591833600&v=beta&t=aLQIqQUNb_5tq-WuHTVGKRdxHlO2j50lO30gUsCutaY"
             alt=""
             srcset=""
+            class="m-sb "
           />
           <div class="post-info__content">
             <span class="link"> {{ getUserName(com.post.userId) }}</span>
@@ -106,10 +106,10 @@
           </div>
           <div class="post-info__button">
             <button class="btn btn--light p-sm">
-              <i class="fa fa-plus" aria-hidden="true"></i>Follow
+              <i class="fa fa-plus f-l" aria-hidden="true"></i>Follow
             </button>
             <button class="btn btn--light-secondary btn--circle p-sm">
-              <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-h f-l" aria-hidden="true"></i>
             </button>
           </div>
         </div>
@@ -120,11 +120,11 @@
         </p>
         <img [src]="com.post.img" alt="" srcset="" />
       </div>
-      <div class="post__footer p-lg">
+      <div class="post__footer ">
         <div class="count-social">
           <ul>
-            <li><i class="fa fa-thumbs-up" aria-hidden="true"></i></li>
-            <li><i class="fa fa-gratipay" aria-hidden="true"></i></li>
+            <li><i class="fa fa-thumbs-up f-l" aria-hidden="true"></i></li>
+            <li><i class="fas fa-heart f-l"></i></li>
             <li>
               <a href="#" class="btn--outline-primary bold">{{
                 com.post.like
@@ -140,18 +140,18 @@
         <div class="social">
           <button
             (click)="incrementLikes(community[i].post)"
-            class="btn btn--light-secondary p-md "
+            class="btn btn--light-secondary p-md f-l "
           >
-            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Like
+            <i class="far fa-thumbs-up p-md f-l"></i>Like
           </button>
           <button
             class="btn btn--light-secondary p-md "
             (click)="showComments()"
           >
-            <i class="fa fa-comment-o" aria-hidden="true"></i>Comment
+            <i class="far fa-comment-dots p-md f-l"></i>Comment
           </button>
           <button class="btn btn--light-secondary p-md ">
-            <i class="fa fa-share" aria-hidden="true"></i>Share
+            <i class="fa fa-share p-md f-l " aria-hidden="true"></i>Share
           </button>
         </div>
         <!--add-comment-->
