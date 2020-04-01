@@ -5,10 +5,12 @@ import { EventEmitter } from "@angular/core";
 // import { Experience } from "./../../_model/experience";
 // import { Experience } from "./../../_model/experience";
 import { ExperienceService } from "./add-section/experince.service";
+import { ActivatedRoute } from "@angular/router";
 @Injectable({
   providedIn: "root"
 })
 export class UserService {
+  currentUser: number;
   private users: User[] = [
     {
       id: 1,
@@ -38,7 +40,7 @@ export class UserService {
       location: "New York",
 
       connections: 600,
-      imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrl: "../../assets/images/salma.jpg",
       imgUrlBG: "../../assets/images/Background_Photo.jpg"
     },
     {
@@ -54,10 +56,23 @@ export class UserService {
     }
   ];
 
-  constructor(private experienceService: ExperienceService) {}
+  constructor(
+    private experienceService: ExperienceService,
+    private activatedRoute: ActivatedRoute
+  ) {
+    // this.currentUser = parseInt(this.activatedRoute.snapshot.params.id);
+    // console.log(this.currentUser);
+  }
+  ngOnInit() {
+    console.log(this.currentUser);
+  }
 
   //       productAdded = new EventEmitter<product>();
   searchItem = new EventEmitter<any>();
+  navMe = new EventEmitter<any>();
+  navHome = new EventEmitter<any>();
+  getProfile = new EventEmitter<any>();
+
   getAll(): User[] {
     return this.users.slice();
   }
@@ -72,7 +87,7 @@ export class UserService {
   }
   getIdByName(nameUser: string) {
     console.log(nameUser);
-    // debugger;
+    //debugger;
     const user = this.users.find(
       a => a.name.toLowerCase() == nameUser.toLowerCase()
     );

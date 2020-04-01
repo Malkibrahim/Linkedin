@@ -36,12 +36,15 @@ import { ExperienceService } from "./features/profile/add-section/experince.serv
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: "", redirectTo: "/home/1", pathMatch: "full" },
+      { path: "home", redirectTo: "/home/1", pathMatch: "full" },
+
       // { path: "home", component: CreatePostComponent },
       { path: "home/:id", component: CreatePostComponent },
       { path: "profile/edit/:id/:idS", component: AddSectionComponent },
+      { path: "profile", redirectTo: "/profile/1", pathMatch: "full" },
 
       { path: "profile/:id", component: UserInfoComponent },
-      { path: "profile", component: UserInfoComponent },
+      // { path: "profile", component: UserInfoComponent },
       { path: "add-post", component: AddPostComponent },
       { path: "add-post/:id", component: AddPostComponent },
       { path: "form", component: AddSectionComponent },

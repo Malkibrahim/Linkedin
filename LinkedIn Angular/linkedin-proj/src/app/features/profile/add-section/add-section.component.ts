@@ -37,10 +37,22 @@ export class AddSectionComponent implements OnInit {
     public userervice: UserService,
     public router: Router,
     private activatedRoute: ActivatedRoute,
-    private experienceService: ExperienceService
+    private experienceService: ExperienceService,
+    private userService: UserService
   ) {}
 
   ngOnInit() {
+    this.userService.searchItem.subscribe(id => {
+      //  debugger;
+      // this.userData = userF.user;
+      // this.experData = userF.userExp;
+      // console.log(this.userData);
+      this.userService.currentUser = id;
+      console.log(this.userService.currentUser);
+      console.log(id);
+      this.router.navigate(["/profile", this.userService.currentUser]);
+      this.ngOnInit();
+    });
     this.userId = parseInt(this.activatedRoute.snapshot.params["id"]);
     this.expId = this.activatedRoute.snapshot.params["idS"];
     console.log(this.userId);

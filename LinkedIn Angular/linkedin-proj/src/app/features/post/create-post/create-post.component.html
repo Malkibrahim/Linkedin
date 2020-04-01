@@ -9,7 +9,9 @@
         <img class="side-card--profile--image" [src]="user.imgUrl" />
       </div>
       <div class="side-card--identify">
-        <h3 class="side-card--identify--name">{{ getUserName(userId) }}</h3>
+        <h3 class="side-card--identify--name" (click)="getProfile($event)">
+          {{ getUserName(userId) }}
+        </h3>
         <p class="side-card--identify--title">{{ user.jopTitle }}</p>
       </div>
       <div class="side-card--card-info">

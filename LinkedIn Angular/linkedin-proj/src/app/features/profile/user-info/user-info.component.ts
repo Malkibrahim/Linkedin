@@ -24,26 +24,37 @@ export class UserInfoComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    if (this.user == null) {
-      this.user = this.userService.getAll();
-    }
+    // if (this.user == null) {
+    //   this.user = this.userService.getAll();
+    // }
     const id = parseInt(this.activatedRoute.snapshot.params["id"]);
+
     this.userData = this.userService.getById(id);
     this.experData = this.experienceService.getExperienceByUserId(id);
     console.log(this.userData);
     console.log(this.experData);
-    console.log(this.user);
+
     // this.userService.searchItem.subscribe(index => {
     //   this.index = index;
     //   console.log(this.index);
     // });
-    this.userService.searchItem.subscribe(id => {
+    this.userService.navHome.subscribe(() => {
       debugger;
+      var id = parseInt(this.activatedRoute.snapshot.params["id"]);
+      console.log(id);
+      this.userService.currentUser = id;
+      console.log(this.userService.currentUser);
+      this.router.navigate(["/home", id]);
+    });
+    this.userService.searchItem.subscribe(id => {
+      //  debugger;
       // this.userData = userF.user;
       // this.experData = userF.userExp;
       // console.log(this.userData);
-      this.router.navigate(["home", id]);
-      this.router.navigate(["profile", id]);
+      this.userService.currentUser = id;
+      console.log(this.userService.currentUser);
+      console.log(id);
+      this.router.navigate(["/profile", this.userService.currentUser]);
       this.ngOnInit();
     });
   }
