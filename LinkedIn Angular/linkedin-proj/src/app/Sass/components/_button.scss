@@ -41,7 +41,7 @@
       background-color: none;
       color: $primary-color;
     }
-    .fa-pencil-square-o {
+    .fa-edit {
       margin: 10px;
     }
   }
@@ -71,7 +71,7 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    .fa-pencil {
+    .fa-edit {
       font-size: large;
     }
     &--light {
@@ -91,7 +91,10 @@
     &:hover {
       background-color: #f3f3f3;
     }
-    .fa-thumbs-o-up,
+    .color {
+      color: $primary-color;
+    }
+    .fa-thumbs-up,
     .fa-comment-o,
     .fa-share {
       margin-right: 6px;

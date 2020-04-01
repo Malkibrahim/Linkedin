@@ -11,7 +11,10 @@
   font-weight: lighter;
 }
 .p-lg {
-  padding: 1.5rem;
+  padding: 1rem;
+}
+.p-xsm {
+  padding: 0.5rem 0.5rem;
 }
 .p-sm {
   padding: 0.2rem 0.5rem;
@@ -45,4 +48,19 @@
 }
 .m-t {
   margin-top: 0.8rem;
+}
+.f-l {
+  font-size: larger;
+}
+.f-xl {
+  font-size: large;
+}
+.m-b {
+  margin-bottom: 8rem;
+}
+.m-sb {
+  margin-bottom: 5rem;
+}
+.color {
+  color: $primary-color;
 }

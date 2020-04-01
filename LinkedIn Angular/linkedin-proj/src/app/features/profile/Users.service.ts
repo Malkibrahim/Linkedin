@@ -97,6 +97,7 @@ export class UserService {
     return user.id;
     // this.users.find(a => a.name === name);
   }
+
   getUserFullDataById(id) {
     this.getById(id);
     this.experienceService.getExperienceByUserId(id);

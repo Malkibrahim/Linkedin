@@ -7,7 +7,7 @@
   </div>
   <div class="post-info p-xxxlg">
     <span class="nav--menu--items--icon">
-      <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      <img [src]="userService.getById(userId).imgUrl" alt="" srcset="" />
     </span>
     <div class="post-info__content">
       <span> {{ user.name }}</span>
