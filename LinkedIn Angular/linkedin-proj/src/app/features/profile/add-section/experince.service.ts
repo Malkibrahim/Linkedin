@@ -56,6 +56,21 @@ export class ExperienceService {
       description: "pala pla pla"
     },
     {
+      id: 2,
+      userId: 2,
+      title: "Manager",
+      location: "Giza ,Egypt",
+      company: {
+        id: 1,
+        name: "Orange Egypt",
+        compLogo: "../../../assets/images/orange.png"
+      },
+
+      startDate: "sept 2014",
+      endDate: "sept 2020",
+      description: "pala pla pla"
+    },
+    {
       id: 1,
       userId: 3,
       title: "Student",
@@ -64,6 +79,51 @@ export class ExperienceService {
         id: 1,
         name: "ITI Information Techonology (ITI)",
         compLogo: "../../assets/images/suez-canal.png"
+      },
+
+      startDate: "Oct 2019",
+      endDate: "sept 2020",
+      description: "pala pla pla"
+    },
+    {
+      id: 2,
+      userId: 3,
+      title: "Student",
+      location: "Cairo ,Egypt",
+      company: {
+        id: 1,
+        name: "Etisalat Egypt",
+        compLogo: "../../assets/images/etisalat.png"
+      },
+
+      startDate: "Oct 2019",
+      endDate: "sept 2020",
+      description: "pala pla pla"
+    },
+    {
+      id: 1,
+      userId: 4,
+      title: "Manager",
+      location: "Cairo ,Egypt",
+      company: {
+        id: 1,
+        name: "Vodafone UK",
+        compLogo: "../../assets/images/vodafone.jpg"
+      },
+
+      startDate: "Oct 2019",
+      endDate: "sept 2020",
+      description: "pala pla pla"
+    },
+    {
+      id: 2,
+      userId: 4,
+      title: "HR",
+      location: "Cairo ,Egypt",
+      company: {
+        id: 1,
+        name: "Information technology institiute (ITI)",
+        compLogo: "../../assets/images/iti.png"
       },
 
       startDate: "Oct 2019",

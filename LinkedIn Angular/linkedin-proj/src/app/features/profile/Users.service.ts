@@ -16,7 +16,7 @@ export class UserService {
       jopTitle: "Web Developer",
       location: "Egypt",
       connections: 500,
-      imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrl: "../../assets/images/malak.jpg",
       imgUrlBG: "../../assets/images/Background_Photo.jpg"
     },
     {
@@ -25,20 +25,31 @@ export class UserService {
       jopTitle: "Front-End Developer",
       location: "New York",
 
-      connections: 600,
+      connections: 700,
 
-      imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrl: "../../assets/images/mariam.jpg",
       imgUrlBG: "../../assets/images/Background_Photo.jpg"
     },
 
     {
       id: 3,
       name: "Salma Wagdy",
-      jopTitle: "Front-End Developer",
+      jopTitle: "Back-End Developer",
       location: "New York",
 
       connections: 600,
       imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrlBG: "../../assets/images/Background_Photo.jpg"
+    },
+    {
+      id: 4,
+      name: "Eslam Taha",
+      jopTitle: "IOS Developer",
+      location: "Paris",
+
+      connections: 1400,
+
+      imgUrl: "../../assets/images/eslam.jpg",
       imgUrlBG: "../../assets/images/Background_Photo.jpg"
     }
   ];
@@ -60,12 +71,15 @@ export class UserService {
     // this.users.find(a => a.name === name);
   }
   getIdByName(nameUser: string) {
-    console.log(name);
+    console.log(nameUser);
     // debugger;
-    const user = this.users.filter(a => a.name == nameUser.toLowerCase());
-    var id = user[0].id;
-    console.log(id);
-    return id;
+    const user = this.users.find(
+      a => a.name.toLowerCase() == nameUser.toLowerCase()
+    );
+    // var id = user[0].id;
+    console.log(this.users.find(a => a.name == nameUser.toLowerCase()));
+    console.log(user);
+    return user.id;
     // this.users.find(a => a.name === name);
   }
 

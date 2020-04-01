@@ -20,6 +20,7 @@ export class AddCommentComponent implements OnInit, OnChanges {
   // community = [];
   newComment: Comment;
   // @Input() comments;
+  myDate: any;
 
   @Input() post;
   user: User;
@@ -31,6 +32,8 @@ export class AddCommentComponent implements OnInit, OnChanges {
   ngOnInit() {
     //   this.community = this.communityService.getAll();
     // console.log(this.comments[0].userId);
+    this.myDate = Date.now();
+    console.log(this.myDate);
   }
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
