@@ -10,9 +10,50 @@ export class CommunityService {
   private community: Community[] = [
     {
       id: 1,
+      userId: 1,
       post: {
         id: 1,
         post: "HI I'M Using LinkedIn :d",
+        userId: 2,
+        img:
+          "https://media-exp1.licdn.com/dms/image/sync/C4E18AQH9BZAHZOw1Hg/companyUpdate-article-image-shrink_627_1200/0?e=1586995200&v=beta&t=eN67_JhHsEnqLE00PZzKmYP8qxO4nGtaRrSXbOTbS7M",
+        comments: [
+          {
+            id: 1,
+            comment: "You are the best dear,,,,, so proud of You 👏👏 (edited)",
+            userId: 3
+          }
+        ],
+        like: 2
+      }
+    },
+    {
+      id: 1,
+      userId: 1,
+      post: {
+        id: 1,
+        post: "HI I'M Using LinkedIn :d",
+        userId: 3,
+        img:
+          "https://media-exp1.licdn.com/dms/image/C4D22AQHqrHZscnlebA/feedshare-shrink_800/0?e=1588809600&v=beta&t=bOO7po4mthom96vOd7HR4TdyT0l15KQQUGTotJhtj8E",
+        comments: [
+          {
+            id: 1,
+            comment: "You are the best dear,,,,, so proud of You 👏👏 (edited)",
+            userId: 3
+          }
+        ],
+        like: 2
+      }
+    },
+    {
+      id: 1,
+      userId: 2,
+      post: {
+        id: 1,
+        post:
+          "By connecting with people you know on LinkedIn, you can keep in touch with them over the years and get the support you need when the time is right. One example is asking for an introduction.",
+
         userId: 1,
         img:
           "https://media-exp1.licdn.com/dms/image/sync/C4E18AQH9BZAHZOw1Hg/companyUpdate-article-image-shrink_627_1200/0?e=1586995200&v=beta&t=eN67_JhHsEnqLE00PZzKmYP8qxO4nGtaRrSXbOTbS7M",
@@ -28,6 +69,7 @@ export class CommunityService {
     },
     {
       id: 2,
+      userId: 2,
       post: {
         id: 2,
         post: "HI I'M Using LinkedIn :d",
@@ -38,7 +80,29 @@ export class CommunityService {
       }
     },
     {
+      id: 1,
+      userId: 3,
+      post: {
+        id: 1,
+        post:
+          "By connecting with people you know on LinkedIn, you can keep in touch with them over the years and get the support you need when the time is right. One example is asking for an introduction.",
+
+        userId: 1,
+        img:
+          "https://media-exp1.licdn.com/dms/image/C5622AQG2CSmbGjaf4g/feedshare-shrink_2048_1536/0?e=1588809600&v=beta&t=riV4mOQjCVFflLfO-Vawjz984RN16DtormqpZTrkSyE",
+        comments: [
+          {
+            id: 1,
+            comment: "You are the best dear,,,,, so proud of You 👏👏 (edited)",
+            userId: 3
+          }
+        ],
+        like: 2
+      }
+    },
+    {
       id: 3,
+      userId: 3,
       post: {
         id: 3,
         post: "HI I'M Using LinkedIn :d",
@@ -89,5 +153,8 @@ export class CommunityService {
   }
   Add(newCommmunity: Community) {
     this.community.push(newCommmunity);
+  }
+  getCommunityById(userId: number) {
+    return this.community.filter(co => co.userId == userId);
   }
 }

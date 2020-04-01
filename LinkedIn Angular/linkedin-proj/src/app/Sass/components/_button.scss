@@ -91,7 +91,10 @@
     &:hover {
       background-color: #f3f3f3;
     }
-    .fa-thumbs-o-up,
+    .color {
+      color: $primary-color;
+    }
+    .fa-thumbs-up,
     .fa-comment-o,
     .fa-share {
       margin-right: 6px;

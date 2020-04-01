@@ -3,4 +3,5 @@ import { Post } from "./posts";
 export interface Community {
   id?: number;
   post?: Post;
+  userId?: number;
 }

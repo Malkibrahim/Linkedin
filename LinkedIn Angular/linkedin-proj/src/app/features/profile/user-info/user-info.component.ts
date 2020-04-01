@@ -38,12 +38,12 @@ export class UserInfoComponent implements OnInit {
     //   console.log(this.index);
     // });
     this.userService.searchItem.subscribe(id => {
-      debugger;
+      // debugger;
       // this.userData = userF.user;
       // this.experData = userF.userExp;
       // console.log(this.userData);
-      this.router.navigate(["home", id]);
-      this.router.navigate(["profile", id]);
+      this.router.navigate(["/home", id]);
+      this.router.navigate(["/profile", id]);
       this.ngOnInit();
     });
   }

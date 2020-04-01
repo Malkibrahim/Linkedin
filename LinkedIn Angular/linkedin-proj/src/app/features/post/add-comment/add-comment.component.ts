@@ -21,7 +21,7 @@ export class AddCommentComponent implements OnInit, OnChanges {
   newComment: Comment;
   // @Input() comments;
   myDate: any;
-
+  userId;
   @Input() post;
   user: User;
   constructor(
@@ -34,16 +34,16 @@ export class AddCommentComponent implements OnInit, OnChanges {
     // console.log(this.comments[0].userId);
     this.myDate = Date.now();
     console.log(this.myDate);
+    this.userId = parseInt(this.route.snapshot.paramMap.get("id"));
   }
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
   }
   onAdd(Newcomment) {
     console.log(Newcomment);
-    let userId = parseInt(this.route.snapshot.paramMap.get("id"));
     let comment = Newcomment.value;
     let id = this.post.comments.length;
-    let newComment = { id: id, comment: comment, userId: userId };
+    let newComment = { id: id, comment: comment, userId: this.userId };
     // this.post.comments.push(newComment);
     // console.log(this.post.id);
     this.communityService.update(this.post.id, newComment);

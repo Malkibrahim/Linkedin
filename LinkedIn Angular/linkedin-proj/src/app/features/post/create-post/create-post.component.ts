@@ -20,8 +20,10 @@ export class CreatePostComponent implements OnInit {
   // community = [];
   community: Community[];
   user: User;
+  users: User[];
   userId;
   isOpen = false;
+  isLiked: boolean;
   myDate: any;
   constructor(
     public communityService: CommunityService,
@@ -30,11 +32,13 @@ export class CreatePostComponent implements OnInit {
     private router: Router
   ) {}
   ngOnInit() {
-    this.community = this.communityService.getAll();
-    // console.log(this.community);
+    this.users = this.userService.getAll();
     let id = parseInt(this.route.snapshot.paramMap.get("id"));
     this.userId = id;
     this.myDate = Date.now();
+    this.isLiked = false;
+    this.community = this.communityService.getCommunityById(this.userId);
+    console.log(this.userId);
     // console.log(id);
   }
   // ngAfterViewInit() {
@@ -49,9 +53,17 @@ export class CreatePostComponent implements OnInit {
 
   incrementLikes(post) {
     for (let i = 0; i < this.community.length; i++) {
-      if (this.community[i].post.id === post.id) {
+      if (this.community[i].post.id === post.id && this.isLiked == false) {
         this.community[i].post.like++;
-        console.log(post.id);
+        this.isLiked = true;
+        console.log(this.isLiked);
+      } else if (
+        this.community[i].post.id === post.id &&
+        this.isLiked == true
+      ) {
+        this.community[i].post.like--;
+        this.isLiked = false;
+        console.log(this.isLiked);
       }
     }
   }
