@@ -40,7 +40,38 @@ export class CreatePostComponent implements OnInit {
     this.community = this.communityService.getCommunityById(this.userId);
     console.log(this.userId);
     // console.log(id);
+    this.userService.navMe.subscribe(id => {
+      // debugger;
+      id = parseInt(this.route.snapshot.params["id"]);
+      console.log(id);
+      this.userService.currentUser = id;
+      console.log(this.userService.currentUser);
+      this.router.navigate(["/profile", id]);
+    });
+    this.userService.searchItem.subscribe(id => {
+      // debugger;
+      // this.userData = userF.user;
+      // this.experData = userF.userExp;
+      // console.log(this.userData);
+      this.router.navigate(["profile", id]);
+      // this.router.navigate(["profile", id]);
+      // this.ngOnInit();
+    });
+    this.userService.getProfile.subscribe(() => {
+      debugger;
+      var id = parseInt(this.route.snapshot.params["id"]);
+      console.log(id);
+      this.userService.currentUser = id;
+      console.log(this.userService.currentUser);
+      this.router.navigate(["profile", id]);
+      // this.router.navigate(["profile", id]);
+      // this.ngOnInit();
+    });
   }
+  getProfile() {
+    this.userService.getProfile.next();
+  }
+
   // ngAfterViewInit() {
   //   console.log(this.post.nativeElement);
   // }
