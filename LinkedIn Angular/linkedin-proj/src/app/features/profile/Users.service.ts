@@ -40,6 +40,17 @@ export class UserService {
       connections: 600,
       imgUrl: "../../assets/images/profile-photo.jpg",
       imgUrlBG: "../../assets/images/Background_Photo.jpg"
+    },
+    {
+      id: 4,
+      name: "Eslam Taha",
+      jopTitle: "IOS Developer",
+      location: "Paris",
+
+      connections: 1400,
+
+      imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrlBG: "../../assets/images/Background_Photo.jpg"
     }
   ];
 

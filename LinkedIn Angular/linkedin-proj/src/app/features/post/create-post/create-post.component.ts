@@ -22,6 +22,7 @@ export class CreatePostComponent implements OnInit {
   user: User;
   userId;
   isOpen = false;
+  myDate: any;
   constructor(
     public communityService: CommunityService,
     public userService: UserService,
@@ -33,6 +34,7 @@ export class CreatePostComponent implements OnInit {
     // console.log(this.community);
     let id = parseInt(this.route.snapshot.paramMap.get("id"));
     this.userId = id;
+    this.myDate = Date.now();
     // console.log(id);
   }
   // ngAfterViewInit() {

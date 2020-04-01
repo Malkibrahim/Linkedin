@@ -69,6 +69,21 @@ export class ExperienceService {
       startDate: "Oct 2019",
       endDate: "sept 2020",
       description: "pala pla pla"
+    },
+    {
+      id: 1,
+      userId: 4,
+      title: "Manager",
+      location: "Cairo ,Egypt",
+      company: {
+        id: 1,
+        name: "Vodafone UK",
+        compLogo: "../../assets/images/vodafone.jpg"
+      },
+
+      startDate: "Oct 2019",
+      endDate: "sept 2020",
+      description: "pala pla pla"
     }
   ];
 
