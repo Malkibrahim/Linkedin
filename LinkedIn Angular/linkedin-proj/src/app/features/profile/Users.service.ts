@@ -16,7 +16,7 @@ export class UserService {
       jopTitle: "Web Developer",
       location: "Egypt",
       connections: 500,
-      imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrl: "../../assets/images/malak.jpg",
       imgUrlBG: "../../assets/images/Background_Photo.jpg"
     },
     {
@@ -25,16 +25,16 @@ export class UserService {
       jopTitle: "Front-End Developer",
       location: "New York",
 
-      connections: 600,
+      connections: 700,
 
-      imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrl: "../../assets/images/mariam.jpg",
       imgUrlBG: "../../assets/images/Background_Photo.jpg"
     },
 
     {
       id: 3,
       name: "Salma Wagdy",
-      jopTitle: "Front-End Developer",
+      jopTitle: "Back-End Developer",
       location: "New York",
 
       connections: 600,
@@ -49,7 +49,7 @@ export class UserService {
 
       connections: 1400,
 
-      imgUrl: "../../assets/images/profile-photo.jpg",
+      imgUrl: "../../assets/images/eslam.jpg",
       imgUrlBG: "../../assets/images/Background_Photo.jpg"
     }
   ];
