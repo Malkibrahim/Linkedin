@@ -71,12 +71,15 @@ export class UserService {
     // this.users.find(a => a.name === name);
   }
   getIdByName(nameUser: string) {
-    console.log(name);
-    debugger;
-    const user = this.users.filter(a => a.name == nameUser.toLowerCase());
-    var id = user[0].id;
-    console.log(id);
-    return id;
+    console.log(nameUser);
+    // debugger;
+    const user = this.users.find(
+      a => a.name.toLowerCase() == nameUser.toLowerCase()
+    );
+    // var id = user[0].id;
+    console.log(this.users.find(a => a.name == nameUser.toLowerCase()));
+    console.log(user);
+    return user.id;
     // this.users.find(a => a.name === name);
   }
   getUserFullDataById(id) {
